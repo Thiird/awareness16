@@ -13392,8 +13392,8 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="X_8" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="SP1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" deviceset="SPEAKER" device="-SMD-11X9" package3d_urn="urn:adsk.eagle:package:24167638/1" value="SPEAKER-11X9"/>
 <part name="U1" library="OPL_IC" library_urn="urn:adsk.eagle:library:8004595" deviceset="MCU-ATMEGA32U4-AU(TQFP44)" device="" package3d_urn="urn:adsk.eagle:package:8004785/1" value="ATMEGA32U4-TQFP44"/>
-<part name="R7" library="Components" deviceset="RESISTOR" device="-0603" value="22"/>
-<part name="R8" library="Components" deviceset="RESISTOR" device="-0603" value="22"/>
+<part name="R7" library="Components" deviceset="RESISTOR" device="-0603" value="22ohm"/>
+<part name="R8" library="Components" deviceset="RESISTOR" device="-0603" value="22ohm"/>
 <part name="C9" library="Components" deviceset="CAPACITOR" device="-0603" value="1uF"/>
 <part name="X_9" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C6" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
@@ -14727,9 +14727,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F13" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD3(TXD1/INT3)"/>
-<wire x1="-27.94" y1="50.8" x2="-15.24" y2="50.8" width="0.1524" layer="91"/>
-<label x="-15.24" y="50.8" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PB4(PCINT4/ADC11)"/>
+<wire x1="-27.94" y1="22.86" x2="-15.24" y2="22.86" width="0.1524" layer="91"/>
+<label x="-15.24" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="C1SWTCH" class="0">
@@ -14748,9 +14748,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F14" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD4(ICP1/ADC8)"/>
-<wire x1="-27.94" y1="48.26" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
-<label x="-15.24" y="48.26" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PB5(PCINT5/OC1A/ADC12/!OC4B)"/>
+<wire x1="-27.94" y1="20.32" x2="-15.24" y2="20.32" width="0.1524" layer="91"/>
+<label x="-15.24" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R0SWTCH" class="0">
@@ -14773,9 +14773,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <junction x="-213.36" y="-40.64"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD2(RXD1/INT2)"/>
-<wire x1="-27.94" y1="53.34" x2="-15.24" y2="53.34" width="0.1524" layer="91"/>
-<label x="-15.24" y="53.34" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PB6(PCINT6/OC1B/OC4B/ADC13)"/>
+<wire x1="-27.94" y1="17.78" x2="-15.24" y2="17.78" width="0.1524" layer="91"/>
+<label x="-15.24" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">

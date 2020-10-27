@@ -14748,9 +14748,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F14" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD4(ICP1/ADC8)"/>
-<wire x1="-27.94" y1="48.26" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
-<label x="-15.24" y="48.26" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PB5(PCINT5/OC1A/ADC12/!OC4B)"/>
+<wire x1="-27.94" y1="20.32" x2="-15.24" y2="20.32" width="0.1524" layer="91"/>
+<label x="-15.24" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R0SWTCH" class="0">
