@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -975,6 +975,11 @@
 <text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26925/1" library_version="1">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
@@ -990,34 +995,15 @@
 </device>
 </devices>
 </deviceset>
-</devicesets>
-</library>
-<library name="ngspice-simulation" urn="urn:adsk.eagle:library:527439">
-<description>SPICE compatible library parts</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="0" urn="urn:adsk.eagle:symbol:527455/1" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<pin name="0" x="0" y="0" visible="off" length="point" direction="sup"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:527478/1" prefix="X_" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
+<deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="G$1" symbol="0" x="0" y="0"/>
+<gate name="1" symbol="GND" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
 <technologies>
-<technology name="">
-<attribute name="SPICEGROUND" value=""/>
-<attribute name="_EXTERNAL_" value=""/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -13666,53 +13652,42 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="GND" width="0" drill="0">
+</class>
 </classes>
 <parts>
 <part name="D0" library="Components" deviceset="DIODE" device="-SOD-123"/>
 <part name="J1" library="TYPE-C-31-M-12" library_urn="urn:adsk.eagle:library:24393131" deviceset="TYPE-C-31-M-12" device="" package3d_urn="urn:adsk.eagle:package:24393136/2"/>
-<part name="X_1" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="R1" library="Components" deviceset="RESISTOR" device="-0603" value="5.1k"/>
 <part name="R2" library="Components" deviceset="RESISTOR" device="-0603" value="5.1k"/>
-<part name="X_8" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="SP1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" deviceset="SPEAKER" device="-SMD-11X9" package3d_urn="urn:adsk.eagle:package:24167638/1" value="SPEAKER-11X9"/>
-<part name="U1" library="OPL_IC" library_urn="urn:adsk.eagle:library:8004595" deviceset="MCU-ATMEGA32U4-AU(TQFP44)" device="" package3d_urn="urn:adsk.eagle:package:8004785/1" value="ATMEGA32U4-TQFP44"/>
+<part name="MCU" library="OPL_IC" library_urn="urn:adsk.eagle:library:8004595" deviceset="MCU-ATMEGA32U4-AU(TQFP44)" device="" package3d_urn="urn:adsk.eagle:package:8004785/1" value="ATMEGA32U4-TQFP44"/>
 <part name="R7" library="Components" deviceset="RESISTOR" device="-0603" value="22"/>
 <part name="C9" library="Components" deviceset="CAPACITOR" device="-0603" value="1uF"/>
-<part name="X_9" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C6" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
 <part name="C10" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
 <part name="C11" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
 <part name="C12" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
 <part name="C13" library="Components" deviceset="CAPACITOR" device="-0603" value="10uF"/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="X_4" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="SW2" library="Controller" deviceset="SWITCH-SMD" device="-EVP-BB2A9B00"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="X_3" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="R3" library="Components" deviceset="RESISTOR" device="-0603" value="10k"/>
 <part name="C1" library="Components" deviceset="CAPACITOR" device="-0603" value="22uF"/>
 <part name="C2" library="Components" deviceset="CAPACITOR" device="-0603" value="22uF"/>
-<part name="X_6" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="R4" library="Components" deviceset="RESISTOR" device="-0603" value="10k"/>
-<part name="X_5" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
-<part name="IC1" library="IS31FL3733-TQLS4" library_urn="urn:adsk.eagle:library:24185069" deviceset="IS31FL3733-TQLS4" device="" package3d_urn="urn:adsk.eagle:package:24185072/2"/>
-<part name="X_7" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="DRIVER" library="IS31FL3733-TQLS4" library_urn="urn:adsk.eagle:library:24185069" deviceset="IS31FL3733-TQLS4" device="" package3d_urn="urn:adsk.eagle:package:24185072/2"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="R5" library="Components" deviceset="RESISTOR" device="-0603" value="4.7k"/>
 <part name="R6" library="Components" deviceset="RESISTOR" device="-0603" value="4.7k"/>
 <part name="R11" library="Components" deviceset="RESISTOR" device="-0603" value="100k"/>
 <part name="C5" library="Components" deviceset="CAPACITOR" device="-0603" value="0.47uF"/>
 <part name="C7" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
-<part name="X_10" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="X_13" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
-<part name="X_14" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="X_15" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C15" library="Components" deviceset="CAPACITOR" device="-0603" value="0.47uF"/>
 <part name="C3" library="Components" deviceset="CAPACITOR" device="-0603" value="0.47uF"/>
 <part name="C4" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
-<part name="X_11" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="D1" library="Components" deviceset="DIODE" device="-SOD-123"/>
 <part name="D2" library="Components" deviceset="DIODE" device="-SOD-123"/>
@@ -13745,21 +13720,14 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="F15" library="Keyboard" deviceset="KEYSWITCH-PLAIN" device="-MX-1U"/>
 <part name="F14" library="Keyboard" deviceset="KEYSWITCH-PLAIN" device="-MX-1U"/>
 <part name="F13" library="Keyboard" deviceset="KEYSWITCH-PLAIN" device="-MX-1U"/>
-<part name="C18" library="Components" deviceset="CAPACITOR" device="-0603" value="100uF"/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="X_22" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
-<part name="X_23" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C19" library="Components" deviceset="CAPACITOR" device="-0603" value="100uF"/>
-<part name="X_17" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C20" library="Components" deviceset="CAPACITOR" device="-0603" value="100uF"/>
-<part name="X_21" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C21" library="Components" deviceset="CAPACITOR" device="-0603" value="100uF"/>
-<part name="X_24" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="Q1" library="crystal-geyer_V1_0_NIC" deviceset="KX" device="-5" package3d_urn="urn:adsk.eagle:package:11926/1" value="16Mhz"/>
 <part name="R12" library="Components" deviceset="RESISTOR" device="-0603" value="500"/>
 <part name="U$1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" deviceset="PRTR5V0U2X" device="" package3d_urn="urn:adsk.eagle:package:24167658/1"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="X_12" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/1"/>
 <part name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/1"/>
 <part name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/1"/>
@@ -13776,7 +13744,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/1"/>
 <part name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/1"/>
 <part name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/1"/>
-<part name="UGLOW4" library="SK6812MINI-E" deviceset="SK6812MINI-E" device=""/>
 <part name="UGLOW3" library="SK6812MINI-E" deviceset="SK6812MINI-E" device=""/>
 <part name="UGLOW2" library="SK6812MINI-E" deviceset="SK6812MINI-E" device=""/>
 <part name="UGLOW1" library="SK6812MINI-E" deviceset="SK6812MINI-E" device=""/>
@@ -13787,10 +13754,27 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="RESET" library="Components" deviceset="RESISTOR" device="-0603" value="20k"/>
 <part name="C8" library="Components" deviceset="CAPACITOR" device="-0603" value="0.47uF"/>
 <part name="C14" library="Components" deviceset="CAPACITOR" device="-0603" value="0.1uF"/>
-<part name="X_16" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="R8" library="Components" deviceset="RESISTOR" device="-0603" value="22"/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13800,19 +13784,19 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <wire x1="-172.72" y1="50.8" x2="-172.72" y2="93.98" width="0.254" layer="94"/>
 <wire x1="-172.72" y1="93.98" x2="-231.14" y2="93.98" width="0.254" layer="94"/>
 <text x="-228.6" y="53.34" size="1.778" layer="94">USB-C Port</text>
-<wire x1="-208.28" y1="25.4" x2="-208.28" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="-208.28" y1="2.54" x2="-172.72" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-200.66" y1="25.4" x2="-200.66" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-200.66" y1="2.54" x2="-172.72" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="-172.72" y1="2.54" x2="-172.72" y2="25.4" width="0.1524" layer="94"/>
-<wire x1="-172.72" y1="25.4" x2="-208.28" y2="25.4" width="0.1524" layer="94"/>
+<wire x1="-172.72" y1="25.4" x2="-200.66" y2="25.4" width="0.1524" layer="94"/>
 <wire x1="-127" y1="93.98" x2="-127" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="-127" y1="2.54" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="-2.54" y1="2.54" x2="-2.54" y2="93.98" width="0.1524" layer="94"/>
 <wire x1="-2.54" y1="93.98" x2="-127" y2="93.98" width="0.1524" layer="94"/>
 <text x="-124.46" y="5.08" size="1.778" layer="94">MCU</text>
 <wire x1="2.54" y1="53.34" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="154.94" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="154.94" y1="2.54" x2="154.94" y2="53.34" width="0.1524" layer="94"/>
-<wire x1="154.94" y1="53.34" x2="2.54" y2="53.34" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="121.92" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="121.92" y1="2.54" x2="121.92" y2="53.34" width="0.1524" layer="94"/>
+<wire x1="121.92" y1="53.34" x2="2.54" y2="53.34" width="0.1524" layer="94"/>
 <text x="5.08" y="5.08" size="1.778" layer="94" rot="MR180">UNDERGLOW</text>
 <wire x1="-208.28" y1="-2.54" x2="-208.28" y2="-124.46" width="0.1524" layer="94"/>
 <wire x1="-208.28" y1="-124.46" x2="-99.06" y2="-124.46" width="0.1524" layer="94"/>
@@ -13848,7 +13832,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <instance part="J1" gate="G$1" x="-223.52" y="76.2" smashed="yes">
 <attribute name="VALUE" x="-222.758" y="63.5" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="X_1" gate="G$1" x="-190.5" y="58.42" smashed="yes"/>
 <instance part="R1" gate="G$1" x="-198.12" y="71.12" smashed="yes" rot="R180">
 <attribute name="NAME" x="-200.66" y="73.4314" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-195.072" y="71.882" size="1.778" layer="96"/>
@@ -13857,14 +13840,12 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-203.454" y="75.692" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="-195.032" y="75.442" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="X_8" gate="G$1" x="-203.2" y="7.62" smashed="yes"/>
-<instance part="SP1" gate="G$1" x="-185.42" y="12.7" smashed="yes" rot="R180">
-<attribute name="NAME" x="-188.722" y="6.096" size="2.54" layer="94" font="vector" rot="R180" align="center"/>
-<attribute name="VALUE" x="-187.96" y="22.86" size="2.54" layer="94" font="vector" rot="R180" align="center"/>
+<instance part="SP1" gate="G$1" x="-180.34" y="12.7" smashed="yes" rot="R180">
+<attribute name="VALUE" x="-186.69" y="22.86" size="2.54" layer="94" font="vector" rot="R180" align="center"/>
 </instance>
-<instance part="U1" gate="G$1" x="-60.96" y="48.26" smashed="yes">
+<instance part="MCU" gate="G$1" x="-60.96" y="48.26" smashed="yes">
 <attribute name="NAME" x="-88.9" y="86.36" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-81.28" y="48.26" size="1.778" layer="96"/>
+<attribute name="VALUE" x="-78.232" y="82.042" size="1.778" layer="96"/>
 </instance>
 <instance part="R7" gate="G$1" x="-193.04" y="83.82" smashed="yes">
 <attribute name="NAME" x="-198.12" y="83.82" size="1.778" layer="95"/>
@@ -13874,7 +13855,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-107.696" y="56.388" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="-107.188" y="55.118" size="1.778" layer="96" rot="MR0" align="top-left"/>
 </instance>
-<instance part="X_9" gate="G$1" x="-116.84" y="53.34" smashed="yes"/>
 <instance part="C6" gate="G$1" x="-157.48" y="17.78" smashed="yes" rot="MR270">
 <attribute name="NAME" x="-160.528" y="20.32" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="-161.036" y="14.986" size="1.778" layer="96" rot="MR180" align="top-left"/>
@@ -13898,14 +13878,12 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <instance part="P+4" gate="VCC" x="-149.86" y="27.94" smashed="yes">
 <attribute name="VALUE" x="-147.32" y="30.48" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X_4" gate="G$1" x="-149.86" y="10.16" smashed="yes"/>
 <instance part="SW2" gate="G$1" x="-106.68" y="78.74" smashed="yes">
 <attribute name="NAME" x="-106.68" y="76.454" size="1.27" layer="95" align="bottom-center"/>
 </instance>
 <instance part="P+2" gate="VCC" x="-114.3" y="88.9" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="-116.84" y="91.44" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="X_3" gate="G$1" x="-114.3" y="76.2" smashed="yes"/>
 <instance part="R3" gate="G$1" x="-106.68" y="83.82" smashed="yes">
 <attribute name="NAME" x="-107.95" y="85.3186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-107.95" y="80.518" size="1.778" layer="96"/>
@@ -13918,17 +13896,14 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-110.744" y="28.194" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="-102.616" y="29.718" size="1.778" layer="96" rot="MR0" align="top-left"/>
 </instance>
-<instance part="X_6" gate="G$1" x="-121.92" y="30.48" smashed="yes"/>
 <instance part="R4" gate="G$1" x="-106.68" y="17.78" smashed="yes">
 <attribute name="NAME" x="-107.95" y="19.2786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-107.95" y="14.478" size="1.778" layer="96"/>
 </instance>
-<instance part="X_5" gate="G$1" x="-114.3" y="7.62" smashed="yes"/>
-<instance part="IC1" gate="G$1" x="-71.12" y="-55.88" smashed="yes">
-<attribute name="NAME" x="-57.15" y="-55.88" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="-48.26" y="-80.01" size="1.778" layer="96" rot="MR90" align="center-left"/>
+<instance part="DRIVER" gate="G$1" x="-71.12" y="-55.88" smashed="yes">
+<attribute name="NAME" x="-50.546" y="-76.708" size="1.778" layer="95" rot="R90" align="center-left"/>
+<attribute name="VALUE" x="-45.466" y="-79.502" size="1.778" layer="96" rot="MR90" align="center-left"/>
 </instance>
-<instance part="X_7" gate="G$1" x="-73.66" y="-38.1" smashed="yes"/>
 <instance part="P+3" gate="VCC" x="-71.12" y="-7.62" smashed="yes">
 <attribute name="VALUE" x="-68.58" y="-5.08" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -13952,16 +13927,12 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-20.574" y="-39.116" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-19.558" y="-37.084" size="1.778" layer="96" rot="R180" align="top-left"/>
 </instance>
-<instance part="X_10" gate="G$1" x="-22.86" y="-48.26" smashed="yes"/>
 <instance part="P+5" gate="VCC" x="-12.7" y="-25.4" smashed="yes">
 <attribute name="VALUE" x="-10.16" y="-22.86" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X_13" gate="G$1" x="-73.66" y="-88.9" smashed="yes"/>
-<instance part="X_14" gate="G$1" x="-7.62" y="-66.04" smashed="yes"/>
 <instance part="P+8" gate="VCC" x="-38.1" y="-10.16" smashed="yes">
 <attribute name="VALUE" x="-35.56" y="-7.62" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X_15" gate="G$1" x="-30.48" y="-27.94" smashed="yes"/>
 <instance part="C15" gate="G$1" x="-30.48" y="-20.32" smashed="yes" rot="R90">
 <attribute name="NAME" x="-28.194" y="-21.336" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-27.178" y="-19.304" size="1.778" layer="96" rot="R180" align="top-left"/>
@@ -13974,7 +13945,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-18.034" y="-79.756" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-17.018" y="-77.724" size="1.778" layer="96" rot="R180" align="top-left"/>
 </instance>
-<instance part="X_11" gate="G$1" x="-20.32" y="-88.9" smashed="yes"/>
 <instance part="P+6" gate="VCC" x="-12.7" y="-68.58" smashed="yes">
 <attribute name="VALUE" x="-11.176" y="-65.786" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -14086,37 +14056,28 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <instance part="F13" gate="G$1" x="-180.34" y="-104.14" smashed="yes">
 <attribute name="NAME" x="-187.15" y="-98.822" size="1" layer="95"/>
 </instance>
-<instance part="C18" gate="G$1" x="15.24" y="35.56" smashed="yes" rot="MR180">
+<instance part="P+9" gate="VCC" x="48.26" y="48.26" smashed="yes">
+<attribute name="VALUE" x="50.8" y="50.8" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="C19" gate="G$1" x="15.24" y="35.56" smashed="yes" rot="MR180">
 <attribute name="NAME" x="14.224" y="36.068" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="14.732" y="34.798" size="1.778" layer="96" rot="MR0" align="top-left"/>
 </instance>
-<instance part="P+9" gate="VCC" x="81.28" y="48.26" smashed="yes">
-<attribute name="VALUE" x="83.82" y="50.8" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="X_22" gate="G$1" x="83.82" y="7.62" smashed="yes"/>
-<instance part="X_23" gate="G$1" x="7.62" y="30.48" smashed="yes"/>
-<instance part="C19" gate="G$1" x="48.26" y="35.56" smashed="yes" rot="MR180">
+<instance part="C20" gate="G$1" x="48.26" y="35.56" smashed="yes" rot="MR180">
 <attribute name="NAME" x="47.244" y="36.068" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="47.752" y="34.798" size="1.778" layer="96" rot="MR0" align="top-left"/>
 </instance>
-<instance part="X_17" gate="G$1" x="40.64" y="30.48" smashed="yes"/>
-<instance part="C20" gate="G$1" x="81.28" y="35.56" smashed="yes" rot="MR180">
+<instance part="C21" gate="G$1" x="81.28" y="35.56" smashed="yes" rot="MR180">
 <attribute name="NAME" x="80.264" y="36.068" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="80.772" y="34.798" size="1.778" layer="96" rot="MR0" align="top-left"/>
 </instance>
-<instance part="X_21" gate="G$1" x="73.66" y="30.48" smashed="yes"/>
-<instance part="C21" gate="G$1" x="114.3" y="35.56" smashed="yes" rot="MR180">
-<attribute name="NAME" x="113.284" y="36.068" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="113.792" y="34.798" size="1.778" layer="96" rot="MR0" align="top-left"/>
-</instance>
-<instance part="X_24" gate="G$1" x="106.68" y="30.48" smashed="yes"/>
 <instance part="Q1" gate="G$1" x="-101.6" y="35.56" smashed="yes" rot="R270">
 <attribute name="NAME" x="-100.584" y="37.338" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-110.49" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="R12" gate="G$1" x="149.86" y="30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="148.6154" y="28.702" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="152.908" y="28.702" size="1.778" layer="96" rot="R90"/>
+<instance part="R12" gate="G$1" x="116.84" y="30.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="115.5954" y="28.702" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="119.888" y="28.702" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U$1" gate="G$1" x="-149.86" y="58.42" smashed="yes">
 <attribute name="NAME" x="-149.86" y="68.58" size="1.27" layer="95" font="vector" align="center"/>
@@ -14125,7 +14086,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <instance part="P+1" gate="VCC" x="-142.24" y="88.9" smashed="yes">
 <attribute name="VALUE" x="-139.7" y="91.44" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X_12" gate="G$1" x="-165.1" y="60.96" smashed="yes"/>
 <instance part="RGB1" gate="G$1" x="33.02" y="-22.86" smashed="yes">
 <attribute name="VALUE" x="5.9055" y="-11.176" size="1.778" layer="95"/>
 <attribute name="NAME" x="29.972" y="-17.272" size="1.778" layer="95"/>
@@ -14175,18 +14135,14 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <instance part="RGB16" gate="G$1" x="116.84" y="-83.82" smashed="yes">
 <attribute name="NAME" x="113.792" y="-78.232" size="1.778" layer="95"/>
 </instance>
-<instance part="UGLOW4" gate="G$1" x="36.83" y="21.59" smashed="yes">
-<attribute name="VALUE" x="9.55675" y="43.7515" size="1.778" layer="95"/>
-<attribute name="NAME" x="31.242" y="25.908" size="1.778" layer="95"/>
+<instance part="UGLOW3" gate="G$1" x="37.084" y="21.59" smashed="yes">
+<attribute name="NAME" x="31.496" y="25.908" size="1.778" layer="95"/>
 </instance>
-<instance part="UGLOW3" gate="G$1" x="69.85" y="21.59" smashed="yes">
-<attribute name="NAME" x="64.262" y="25.908" size="1.778" layer="95"/>
+<instance part="UGLOW2" gate="G$1" x="71.12" y="21.59" smashed="yes">
+<attribute name="NAME" x="65.532" y="25.908" size="1.778" layer="95"/>
 </instance>
-<instance part="UGLOW2" gate="G$1" x="102.87" y="21.59" smashed="yes">
-<attribute name="NAME" x="97.282" y="25.908" size="1.778" layer="95"/>
-</instance>
-<instance part="UGLOW1" gate="G$1" x="135.89" y="21.59" smashed="yes">
-<attribute name="NAME" x="130.302" y="25.908" size="1.778" layer="95"/>
+<instance part="UGLOW1" gate="G$1" x="103.124" y="21.59" smashed="yes">
+<attribute name="NAME" x="97.536" y="25.908" size="1.778" layer="95"/>
 </instance>
 <instance part="P+7" gate="VCC" x="-106.68" y="71.12" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="-109.22" y="73.66" size="1.778" layer="96" rot="MR180"/>
@@ -14213,7 +14169,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-18.034" y="-105.156" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-17.018" y="-103.124" size="1.778" layer="96" rot="R180" align="top-left"/>
 </instance>
-<instance part="X_16" gate="G$1" x="-20.32" y="-114.3" smashed="yes"/>
 <instance part="P+10" gate="VCC" x="-12.7" y="-93.98" smashed="yes">
 <attribute name="VALUE" x="-11.176" y="-91.186" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -14224,6 +14179,24 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-198.12" y="78.74" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-190.52" y="76.764" size="1.778" layer="96"/>
 </instance>
+<instance part="GND1" gate="1" x="-20.32" y="-91.44" smashed="yes"/>
+<instance part="GND2" gate="1" x="-7.62" y="-68.58" smashed="yes"/>
+<instance part="GND3" gate="1" x="-20.32" y="-116.84" smashed="yes"/>
+<instance part="GND4" gate="1" x="-73.66" y="-91.44" smashed="yes"/>
+<instance part="GND5" gate="1" x="-22.86" y="-50.8" smashed="yes"/>
+<instance part="GND6" gate="1" x="-30.48" y="-30.48" smashed="yes"/>
+<instance part="GND7" gate="1" x="-73.66" y="-40.64" smashed="yes"/>
+<instance part="GND8" gate="1" x="-114.3" y="5.08" smashed="yes"/>
+<instance part="GND9" gate="1" x="-121.92" y="27.94" smashed="yes"/>
+<instance part="GND10" gate="1" x="-116.84" y="50.8" smashed="yes"/>
+<instance part="GND11" gate="1" x="-114.3" y="73.66" smashed="yes"/>
+<instance part="GND12" gate="1" x="-165.1" y="58.42" smashed="yes"/>
+<instance part="GND13" gate="1" x="-190.5" y="55.88" smashed="yes"/>
+<instance part="GND14" gate="1" x="83.82" y="5.08" smashed="yes"/>
+<instance part="GND15" gate="1" x="73.66" y="30.48" smashed="yes"/>
+<instance part="GND16" gate="1" x="40.64" y="30.48" smashed="yes"/>
+<instance part="GND17" gate="1" x="7.62" y="30.48" smashed="yes"/>
+<instance part="GND18" gate="1" x="-149.86" y="7.62" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -14259,7 +14232,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="VIO"/>
+<pinref part="DRIVER" gate="G$1" pin="VIO"/>
 <pinref part="P+8" gate="VCC" pin="VCC"/>
 <wire x1="-38.1" y1="-38.1" x2="-38.1" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="2"/>
@@ -14268,67 +14241,42 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <junction x="-38.1" y="-15.24"/>
 </segment>
 <segment>
-<pinref part="P+5" gate="VCC" pin="VCC"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="-27.94" x2="-12.7" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="-33.02" x2="-22.86" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-12.7" y="-33.02"/>
-<pinref part="IC1" gate="G$1" pin="AVCC"/>
-<wire x1="-33.02" y1="-38.1" x2="-33.02" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="-33.02" x2="-22.86" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-33.02"/>
-<pinref part="IC1" gate="G$1" pin="DVCC"/>
-<wire x1="-35.56" y1="-38.1" x2="-35.56" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="-33.02" x2="-33.02" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-33.02" y="-33.02"/>
-</segment>
-<segment>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="-12.7" y1="-71.12" x2="-12.7" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-12.7" y1="-73.66" x2="-20.32" y2="-73.66" width="0.1524" layer="91"/>
 <junction x="-12.7" y="-73.66"/>
-<pinref part="IC1" gate="G$1" pin="PVCC_2"/>
+<pinref part="DRIVER" gate="G$1" pin="PVCC_2"/>
 <wire x1="-25.4" y1="-73.66" x2="-20.32" y2="-73.66" width="0.1524" layer="91"/>
 <junction x="-20.32" y="-73.66"/>
 </segment>
 <segment>
-<wire x1="58.42" y1="22.86" x2="55.88" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="22.86" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="35.56" x2="55.88" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="40.64" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="40.64" x2="22.86" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="35.56" x2="22.86" y2="22.86" width="0.1524" layer="91"/>
-<junction x="55.88" y="40.64"/>
-<wire x1="88.9" y1="40.64" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="40.64" x2="55.88" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="22.86" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="22.86" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="35.56" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="40.64" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="22.86" x2="88.9" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="25.654" y1="22.86" x2="22.86" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="22.86" x2="22.86" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="35.56" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="40.64" x2="48.26" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="40.64" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="91.694" y1="22.86" x2="88.9" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="22.86" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
-<junction x="88.9" y="40.64"/>
-<pinref part="C20" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="35.56" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="35.56" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
-<junction x="88.9" y="35.56"/>
-<pinref part="C21" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="35.56" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
-<junction x="121.92" y="35.56"/>
-<pinref part="C19" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="40.64" x2="55.88" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="59.69" y1="22.86" x2="55.88" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="22.86" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
+<junction x="55.88" y="40.64"/>
+<pinref part="C20" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="35.56" x2="55.88" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="35.56" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
 <junction x="55.88" y="35.56"/>
-<pinref part="C18" gate="G$1" pin="2"/>
+<pinref part="C21" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="35.56" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
+<junction x="88.9" y="35.56"/>
+<pinref part="C19" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="35.56" x2="22.86" y2="35.56" width="0.1524" layer="91"/>
 <junction x="22.86" y="35.56"/>
 <pinref part="P+9" gate="VCC" pin="VCC"/>
-<wire x1="81.28" y1="45.72" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
-<junction x="81.28" y="40.64"/>
-<pinref part="UGLOW4" gate="G$1" pin="VDD"/>
-<wire x1="25.4" y1="22.86" x2="22.86" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="45.72" x2="48.26" y2="40.64" width="0.1524" layer="91"/>
+<junction x="48.26" y="40.64"/>
 <pinref part="UGLOW3" gate="G$1" pin="VDD"/>
 <pinref part="UGLOW2" gate="G$1" pin="VDD"/>
 <pinref part="UGLOW1" gate="G$1" pin="VDD"/>
@@ -14359,15 +14307,15 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <junction x="-96.52" y="76.2"/>
 <wire x1="-93.98" y1="78.74" x2="-96.52" y2="78.74" width="0.1524" layer="91"/>
 <junction x="-96.52" y="78.74"/>
-<pinref part="U1" gate="G$1" pin="VCC@1"/>
-<pinref part="U1" gate="G$1" pin="AVCC@1"/>
-<pinref part="U1" gate="G$1" pin="VCC@2"/>
-<pinref part="U1" gate="G$1" pin="AVCC@2"/>
-<pinref part="U1" gate="G$1" pin="UVCC"/>
+<pinref part="MCU" gate="G$1" pin="VCC@1"/>
+<pinref part="MCU" gate="G$1" pin="AVCC@1"/>
+<pinref part="MCU" gate="G$1" pin="VCC@2"/>
+<pinref part="MCU" gate="G$1" pin="AVCC@2"/>
+<pinref part="MCU" gate="G$1" pin="UVCC"/>
 <wire x1="-93.98" y1="58.42" x2="-96.52" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="58.42" x2="-96.52" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-96.52" y="73.66"/>
-<pinref part="U1" gate="G$1" pin="VBUS"/>
+<pinref part="MCU" gate="G$1" pin="VBUS"/>
 <wire x1="-96.52" y1="60.96" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="66.04" x2="-96.52" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-93.98" y1="60.96" x2="-96.52" y2="60.96" width="0.1524" layer="91"/>
@@ -14378,225 +14326,34 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="P+7" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SDB"/>
+<pinref part="DRIVER" gate="G$1" pin="SDB"/>
 <pinref part="P+11" gate="VCC" pin="VCC"/>
 <wire x1="-55.88" y1="-38.1" x2="-55.88" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="0" class="0">
 <segment>
-<pinref part="X_1" gate="G$1" pin="0"/>
-<wire x1="-190.5" y1="60.96" x2="-190.5" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-193.04" y1="73.66" x2="-190.5" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="73.66" x2="-190.5" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="GND"/>
-<wire x1="-190.5" y1="71.12" x2="-190.5" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="63.5" x2="-190.5" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-205.74" y1="60.96" x2="-190.5" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-190.5" y="60.96"/>
-<pinref part="FB2" gate="G$1" pin="2"/>
-<wire x1="-193.04" y1="63.5" x2="-190.5" y2="63.5" width="0.1524" layer="91"/>
-<junction x="-190.5" y="63.5"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-193.04" y1="71.12" x2="-190.5" y2="71.12" width="0.1524" layer="91"/>
-<junction x="-190.5" y="71.12"/>
-</segment>
-<segment>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="-111.76" y1="55.88" x2="-116.84" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="X_9" gate="G$1" pin="0"/>
-<wire x1="-116.84" y1="55.88" x2="-116.84" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C13" gate="G$1" pin="2"/>
-<pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="-165.1" y1="12.7" x2="-157.48" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="-157.48" y1="12.7" x2="-149.86" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-157.48" y="12.7"/>
-<pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="-149.86" y1="12.7" x2="-142.24" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-149.86" y="12.7"/>
-<pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="-142.24" y1="12.7" x2="-134.62" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-142.24" y="12.7"/>
-<pinref part="X_4" gate="G$1" pin="0"/>
-<wire x1="-149.86" y1="12.7" x2="-149.86" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="-111.76" y1="78.74" x2="-114.3" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="78.74" x2="-114.3" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="SW2" gate="G$1" pin="1"/>
-<pinref part="X_3" gate="G$1" pin="0"/>
-</segment>
-<segment>
-<wire x1="-93.98" y1="10.16" x2="-114.3" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="X_5" gate="G$1" pin="0"/>
-<wire x1="-114.3" y1="10.16" x2="-114.3" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="-111.76" y1="17.78" x2="-114.3" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="17.78" x2="-114.3" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-114.3" y="10.16"/>
-<wire x1="-114.3" y1="12.7" x2="-114.3" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="12.7" x2="-96.52" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-114.3" y="12.7"/>
-<wire x1="-96.52" y1="12.7" x2="-114.3" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="15.24" x2="-96.52" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-96.52" y1="15.24" x2="-96.52" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-96.52" y="12.7"/>
-<wire x1="-93.98" y1="17.78" x2="-96.52" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-96.52" y1="17.78" x2="-96.52" y2="15.24" width="0.1524" layer="91"/>
-<junction x="-96.52" y="15.24"/>
-<wire x1="-93.98" y1="20.32" x2="-96.52" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-96.52" y1="20.32" x2="-96.52" y2="17.78" width="0.1524" layer="91"/>
-<junction x="-96.52" y="17.78"/>
-<pinref part="U1" gate="G$1" pin="UGND"/>
-<pinref part="U1" gate="G$1" pin="GND@1"/>
-<pinref part="U1" gate="G$1" pin="GND@2"/>
-<pinref part="U1" gate="G$1" pin="GND@3"/>
-<pinref part="U1" gate="G$1" pin="GND@4"/>
-</segment>
-<segment>
-<pinref part="SP1" gate="G$1" pin="-"/>
-<wire x1="-190.5" y1="15.24" x2="-203.2" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-203.2" y1="15.24" x2="-203.2" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="X_8" gate="G$1" pin="0"/>
-</segment>
-<segment>
-<pinref part="X_7" gate="G$1" pin="0"/>
-<wire x1="-73.66" y1="-38.1" x2="-73.66" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="GND_2"/>
-<wire x1="-63.5" y1="-38.1" x2="-63.5" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="-73.66" y1="-35.56" x2="-63.5" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="GND_1"/>
-<wire x1="-63.5" y1="-35.56" x2="-60.96" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="-35.56" x2="-60.96" y2="-38.1" width="0.1524" layer="91"/>
-<junction x="-63.5" y="-35.56"/>
-<junction x="-73.66" y="-35.56"/>
-<wire x1="-73.66" y1="-33.02" x2="-73.66" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<wire x1="-71.12" y1="-33.02" x2="-73.66" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="ADDR2"/>
-<wire x1="-50.8" y1="-38.1" x2="-50.8" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="-35.56" x2="-60.96" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="-60.96" y="-35.56"/>
-<pinref part="IC1" gate="G$1" pin="ADDR1"/>
-<wire x1="-48.26" y1="-38.1" x2="-48.26" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="-35.56" x2="-50.8" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="-50.8" y="-35.56"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="PGND_2"/>
-<pinref part="X_13" gate="G$1" pin="0"/>
-<wire x1="-71.12" y1="-83.82" x2="-73.66" y2="-83.82" width="0.1524" layer="91"/>
-<wire x1="-73.66" y1="-83.82" x2="-73.66" y2="-88.9" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="PGND_1"/>
-<wire x1="-71.12" y1="-66.04" x2="-73.66" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="-73.66" y1="-66.04" x2="-73.66" y2="-83.82" width="0.1524" layer="91"/>
-<junction x="-73.66" y="-83.82"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="AGND"/>
-<wire x1="-25.4" y1="-60.96" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="-60.96" x2="-7.62" y2="-66.04" width="0.1524" layer="91"/>
-<pinref part="X_14" gate="G$1" pin="0"/>
-<pinref part="RESET" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="-58.42" x2="-7.62" y2="-58.42" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="-58.42" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
-<junction x="-7.62" y="-60.96"/>
-</segment>
-<segment>
-<pinref part="X_15" gate="G$1" pin="0"/>
-<pinref part="C15" gate="G$1" pin="1"/>
-<wire x1="-30.48" y1="-27.94" x2="-30.48" y2="-25.4" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X_10" gate="G$1" pin="0"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="-48.26" x2="-22.86" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="-43.18" x2="-12.7" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-43.18"/>
-</segment>
-<segment>
-<pinref part="X_11" gate="G$1" pin="0"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-20.32" y1="-88.9" x2="-20.32" y2="-83.82" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="-20.32" y1="-83.82" x2="-12.7" y2="-83.82" width="0.1524" layer="91"/>
-<junction x="-20.32" y="-83.82"/>
-</segment>
-<segment>
-<wire x1="7.62" y1="35.56" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="X_23" gate="G$1" pin="0"/>
-<pinref part="C18" gate="G$1" pin="1"/>
-<wire x1="10.16" y1="35.56" x2="7.62" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="40.64" y1="35.56" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="X_17" gate="G$1" pin="0"/>
-<pinref part="C19" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="35.56" x2="40.64" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="73.66" y1="35.56" x2="73.66" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="X_21" gate="G$1" pin="0"/>
-<pinref part="C20" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="35.56" x2="73.66" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="35.56" x2="106.68" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="X_24" gate="G$1" pin="0"/>
-<pinref part="C21" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="35.56" x2="106.68" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-114.3" y1="30.48" x2="-116.84" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="30.48" x2="-116.84" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-116.84" y1="35.56" x2="-116.84" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="40.64" x2="-114.3" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="P$1"/>
-<wire x1="-105.664" y1="35.56" x2="-116.84" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-116.84" y="35.56"/>
-<pinref part="X_6" gate="G$1" pin="0"/>
-<wire x1="-116.84" y1="35.56" x2="-121.92" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="35.56" x2="-121.92" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="50.8" y1="20.32" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="12.7" x2="83.82" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="12.7" x2="83.82" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="20.32" x2="116.84" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="20.32" x2="116.84" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="12.7" x2="83.82" y2="12.7" width="0.1524" layer="91"/>
-<junction x="83.82" y="12.7"/>
-<wire x1="147.32" y1="20.32" x2="149.86" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="20.32" x2="149.86" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="12.7" x2="116.84" y2="12.7" width="0.1524" layer="91"/>
-<junction x="116.84" y="12.7"/>
-<junction x="83.82" y="12.7"/>
-<pinref part="X_22" gate="G$1" pin="0"/>
-<wire x1="83.82" y1="7.62" x2="83.82" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="UGLOW4" gate="G$1" pin="GND"/>
-<wire x1="48.26" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="UGLOW3" gate="G$1" pin="GND"/>
-<pinref part="UGLOW2" gate="G$1" pin="GND"/>
-<pinref part="UGLOW1" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="1"/>
-<wire x1="-162.56" y1="63.5" x2="-165.1" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-165.1" y1="63.5" x2="-165.1" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="X_12" gate="G$1" pin="0"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="-22.86" y1="-33.02" x2="-22.86" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="-12.7" y1="-33.02" x2="-12.7" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-30.48" x2="-22.86" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<wire x1="-12.7" y1="-30.48" x2="-12.7" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="-12.7" y="-30.48"/>
+<pinref part="DRIVER" gate="G$1" pin="AVCC"/>
+<wire x1="-33.02" y1="-38.1" x2="-33.02" y2="-33.02" width="0.1524" layer="91"/>
+<pinref part="DRIVER" gate="G$1" pin="DVCC"/>
+<wire x1="-35.56" y1="-38.1" x2="-35.56" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-33.02" x2="-33.02" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="-33.02" x2="-25.4" y2="-33.02" width="0.1524" layer="91"/>
+<junction x="-33.02" y="-33.02"/>
+<wire x1="-25.4" y1="-33.02" x2="-25.4" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-30.48" x2="-22.86" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-30.48"/>
 </segment>
 </net>
 <net name="D-" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="D-"/>
+<pinref part="MCU" gate="G$1" pin="D-"/>
 <wire x1="-101.6" y1="48.26" x2="-93.98" y2="48.26" width="0.1524" layer="91"/>
 <label x="-101.6" y="48.26" size="1.778" layer="95"/>
 </segment>
@@ -14613,7 +14370,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="D+" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="D+"/>
+<pinref part="MCU" gate="G$1" pin="D+"/>
 <wire x1="-93.98" y1="50.8" x2="-101.6" y2="50.8" width="0.1524" layer="91"/>
 <label x="-101.6" y="50.8" size="1.778" layer="95"/>
 </segment>
@@ -14639,7 +14396,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <segment>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="-101.6" y1="55.88" x2="-93.98" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="UCAP"/>
+<pinref part="MCU" gate="G$1" pin="UCAP"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -14648,7 +14405,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="Q1" gate="G$1" pin="1"/>
 <wire x1="-101.6" y1="40.64" x2="-104.14" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="38.1" x2="-101.6" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="XTAL1"/>
+<pinref part="MCU" gate="G$1" pin="XTAL1"/>
 <wire x1="-93.98" y1="38.1" x2="-96.52" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="38.1" x2="-96.52" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="40.64" x2="-101.6" y2="40.64" width="0.1524" layer="91"/>
@@ -14658,11 +14415,11 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <net name="AUDIO" class="0">
 <segment>
 <pinref part="SP1" gate="G$1" pin="+"/>
-<wire x1="-190.5" y1="10.16" x2="-200.66" y2="10.16" width="0.1524" layer="91"/>
-<label x="-200.66" y="10.16" size="1.778" layer="95"/>
+<wire x1="-185.42" y1="10.16" x2="-193.04" y2="10.16" width="0.1524" layer="91"/>
+<label x="-193.04" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PB6(PCINT6/OC1B/OC4B/ADC13)"/>
+<pinref part="MCU" gate="G$1" pin="PB6(PCINT6/OC1B/OC4B/ADC13)"/>
 <wire x1="-30.48" y1="15.24" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
 <label x="-17.78" y="15.24" size="1.778" layer="95"/>
 </segment>
@@ -14670,7 +14427,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <net name="N$17" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="U1" gate="G$1" pin="!RESET"/>
+<pinref part="MCU" gate="G$1" pin="!RESET"/>
 <wire x1="-93.98" y1="83.82" x2="-99.06" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="SW2" gate="G$1" pin="2"/>
 <wire x1="-99.06" y1="83.82" x2="-101.6" y2="83.82" width="0.1524" layer="91"/>
@@ -14681,12 +14438,12 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="SCL" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PD0(OC0B/SCL/INT0)"/>
+<pinref part="MCU" gate="G$1" pin="PD0(OC0B/SCL/INT0)"/>
 <wire x1="-30.48" y1="55.88" x2="-17.78" y2="55.88" width="0.1524" layer="91"/>
 <label x="-17.78" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SCL"/>
+<pinref part="DRIVER" gate="G$1" pin="SCL"/>
 <wire x1="-45.72" y1="-38.1" x2="-45.72" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="-22.86" x2="-55.88" y2="-22.86" width="0.1524" layer="91"/>
 <label x="-81.28" y="-22.86" size="1.778" layer="95"/>
@@ -14699,12 +14456,12 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="SDA" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PD1(SDA/INT1)"/>
+<pinref part="MCU" gate="G$1" pin="PD1(SDA/INT1)"/>
 <wire x1="-30.48" y1="53.34" x2="-17.78" y2="53.34" width="0.1524" layer="91"/>
 <label x="-17.78" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SDA"/>
+<pinref part="DRIVER" gate="G$1" pin="SDA"/>
 <wire x1="-43.18" y1="-38.1" x2="-43.18" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="-20.32" x2="-48.26" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-81.28" y="-20.32" size="1.778" layer="95"/>
@@ -14715,24 +14472,17 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <junction x="-48.26" y="-20.32"/>
 </segment>
 </net>
-<net name="SDB" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PF0(ADC0)"/>
-<wire x1="-30.48" y1="83.82" x2="-17.78" y2="83.82" width="0.1524" layer="91"/>
-<label x="-17.78" y="83.82" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="UNDGLOW" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PF1(ADC1)"/>
-<wire x1="-30.48" y1="81.28" x2="-17.78" y2="81.28" width="0.1524" layer="91"/>
-<label x="-17.78" y="81.28" size="1.778" layer="95"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="116.84" y1="35.56" x2="116.84" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="38.1" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
+<label x="104.14" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="149.86" y1="35.56" x2="149.86" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="38.1" x2="137.16" y2="38.1" width="0.1524" layer="91"/>
-<label x="137.16" y="38.1" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PB3(PD0/PCINT3/MISO)"/>
+<wire x1="-30.48" y1="22.86" x2="-17.78" y2="22.86" width="0.1524" layer="91"/>
+<label x="-17.78" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R0RED" class="0">
@@ -14759,7 +14509,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="RGB4" gate="G$1" pin="R"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW12"/>
+<pinref part="DRIVER" gate="G$1" pin="SW12"/>
 <wire x1="-58.42" y1="-101.6" x2="-58.42" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="-58.42" y1="-104.14" x2="-78.74" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="-104.14" x2="-78.74" y2="-83.82" width="0.1524" layer="91"/>
@@ -14791,7 +14541,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="RGB4" gate="G$1" pin="G"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW11"/>
+<pinref part="DRIVER" gate="G$1" pin="SW11"/>
 <wire x1="-60.96" y1="-101.6" x2="-60.96" y2="-106.68" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="-106.68" x2="-81.28" y2="-106.68" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="-106.68" x2="-81.28" y2="-86.36" width="0.1524" layer="91"/>
@@ -14819,7 +14569,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="RGB4" gate="G$1" pin="B"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW10"/>
+<pinref part="DRIVER" gate="G$1" pin="SW10"/>
 <wire x1="-63.5" y1="-101.6" x2="-63.5" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="-109.22" x2="-83.82" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="-109.22" x2="-83.82" y2="-88.9" width="0.1524" layer="91"/>
@@ -14829,7 +14579,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="C0RGB" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="CS1"/>
+<pinref part="DRIVER" gate="G$1" pin="CS1"/>
 <wire x1="-55.88" y1="-101.6" x2="-55.88" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="-116.84" x2="-40.64" y2="-116.84" width="0.1524" layer="91"/>
 <label x="-48.26" y="-116.84" size="1.778" layer="95"/>
@@ -14862,7 +14612,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="C1RGB" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="CS2"/>
+<pinref part="DRIVER" gate="G$1" pin="CS2"/>
 <wire x1="-53.34" y1="-101.6" x2="-53.34" y2="-114.3" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-114.3" x2="-40.64" y2="-114.3" width="0.1524" layer="91"/>
 <label x="-48.26" y="-114.3" size="1.778" layer="95"/>
@@ -14895,7 +14645,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="R1RED" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW9"/>
+<pinref part="DRIVER" gate="G$1" pin="SW9"/>
 <wire x1="-71.12" y1="-81.28" x2="-91.44" y2="-81.28" width="0.1524" layer="91"/>
 <label x="-91.44" y="-81.28" size="1.778" layer="95"/>
 </segment>
@@ -14924,7 +14674,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="R1GREEN" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW8"/>
+<pinref part="DRIVER" gate="G$1" pin="SW8"/>
 <wire x1="-71.12" y1="-78.74" x2="-91.44" y2="-78.74" width="0.1524" layer="91"/>
 <label x="-91.44" y="-78.74" size="1.778" layer="95"/>
 </segment>
@@ -14953,7 +14703,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="R1BLUE" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW7"/>
+<pinref part="DRIVER" gate="G$1" pin="SW7"/>
 <wire x1="-71.12" y1="-76.2" x2="-91.44" y2="-76.2" width="0.1524" layer="91"/>
 <label x="-91.44" y="-76.2" size="1.778" layer="95"/>
 </segment>
@@ -14992,9 +14742,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F13" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD3(TXD1/INT3)"/>
-<wire x1="-30.48" y1="48.26" x2="-17.78" y2="48.26" width="0.1524" layer="91"/>
-<label x="-17.78" y="48.26" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PD2(RXD1/INT2)"/>
+<wire x1="-30.48" y1="50.8" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
+<label x="-17.78" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="C1SWTCH" class="0">
@@ -15013,8 +14763,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F14" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD4(ICP1/ADC8)"/>
-<wire x1="-30.48" y1="45.72" x2="-17.78" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="MCU" gate="G$1" pin="PB5(PCINT5/OC1A/ADC12/!OC4B)"/>
+<wire x1="-30.48" y1="17.78" x2="-17.78" y2="17.78" width="0.1524" layer="91"/>
+<label x="-17.78" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R0SWTCH" class="0">
@@ -15037,9 +14788,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <junction x="-167.64" y="-40.64"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD2(RXD1/INT2)"/>
-<wire x1="-30.48" y1="50.8" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
-<label x="-17.78" y="50.8" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PD3(TXD1/INT3)"/>
+<wire x1="-30.48" y1="48.26" x2="-17.78" y2="48.26" width="0.1524" layer="91"/>
+<label x="-17.78" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -15114,7 +14865,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="R2RED" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW6"/>
+<pinref part="DRIVER" gate="G$1" pin="SW6"/>
 <wire x1="-71.12" y1="-73.66" x2="-91.44" y2="-73.66" width="0.1524" layer="91"/>
 <label x="-91.44" y="-73.66" size="1.778" layer="95"/>
 </segment>
@@ -15143,7 +14894,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="R2GREEN" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW5"/>
+<pinref part="DRIVER" gate="G$1" pin="SW5"/>
 <wire x1="-71.12" y1="-71.12" x2="-91.44" y2="-71.12" width="0.1524" layer="91"/>
 <label x="-91.44" y="-71.12" size="1.778" layer="95"/>
 </segment>
@@ -15172,7 +14923,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="R2BLUE" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW4"/>
+<pinref part="DRIVER" gate="G$1" pin="SW4"/>
 <wire x1="-71.12" y1="-68.58" x2="-91.44" y2="-68.58" width="0.1524" layer="91"/>
 <label x="-91.44" y="-68.58" size="1.778" layer="95"/>
 </segment>
@@ -15211,7 +14962,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F16" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PC7(ICP3/CLK0/OC4A)"/>
+<pinref part="MCU" gate="G$1" pin="PC7(ICP3/CLK0/OC4A)"/>
 <wire x1="-30.48" y1="63.5" x2="-17.78" y2="63.5" width="0.1524" layer="91"/>
 <label x="-17.78" y="63.5" size="1.778" layer="95"/>
 </segment>
@@ -15232,14 +14983,14 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="F15" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PC6(OC3A/!OC4A)"/>
+<pinref part="MCU" gate="G$1" pin="PC6(OC3A/!OC4A)"/>
 <wire x1="-30.48" y1="66.04" x2="-17.78" y2="66.04" width="0.1524" layer="91"/>
 <label x="-17.78" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="C2RGB" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="CS3"/>
+<pinref part="DRIVER" gate="G$1" pin="CS3"/>
 <wire x1="-50.8" y1="-101.6" x2="-50.8" y2="-111.76" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-111.76" x2="-40.64" y2="-111.76" width="0.1524" layer="91"/>
 <label x="-48.26" y="-111.76" size="1.778" layer="95"/>
@@ -15265,7 +15016,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="C3RGB" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="CS4"/>
+<pinref part="DRIVER" gate="G$1" pin="CS4"/>
 <wire x1="-48.26" y1="-101.6" x2="-48.26" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="-109.22" x2="-40.64" y2="-109.22" width="0.1524" layer="91"/>
 <label x="-48.26" y="-109.22" size="1.778" layer="95"/>
@@ -15313,7 +15064,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="RGB16" gate="G$1" pin="R"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW3"/>
+<pinref part="DRIVER" gate="G$1" pin="SW3"/>
 <wire x1="-71.12" y1="-63.5" x2="-76.2" y2="-63.5" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="-63.5" x2="-76.2" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="-66.04" x2="-91.44" y2="-66.04" width="0.1524" layer="91"/>
@@ -15344,7 +15095,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="RGB16" gate="G$1" pin="G"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW2"/>
+<pinref part="DRIVER" gate="G$1" pin="SW2"/>
 <wire x1="-71.12" y1="-60.96" x2="-78.74" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="-60.96" x2="-78.74" y2="-63.5" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="-63.5" x2="-91.44" y2="-63.5" width="0.1524" layer="91"/>
@@ -15371,7 +15122,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="RGB16" gate="G$1" pin="B"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SW1"/>
+<pinref part="DRIVER" gate="G$1" pin="SW1"/>
 <wire x1="-71.12" y1="-58.42" x2="-81.28" y2="-58.42" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="-58.42" x2="-81.28" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="-60.96" x2="-91.44" y2="-60.96" width="0.1524" layer="91"/>
@@ -15412,9 +15163,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="D7" gate="D$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD5(XCLK1/!CTS)"/>
-<wire x1="-30.48" y1="43.18" x2="-17.78" y2="43.18" width="0.1524" layer="91"/>
-<label x="-17.78" y="43.18" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PB7(PCINT7/OC0A/OC1C/!RTS)"/>
+<wire x1="-30.48" y1="12.7" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
+<label x="-17.78" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R2SWTCH" class="0">
@@ -15435,9 +15186,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="D11" gate="D$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD6(T1/ADC9/!OC4D)"/>
-<wire x1="-30.48" y1="40.64" x2="-17.78" y2="40.64" width="0.1524" layer="91"/>
-<label x="-17.78" y="40.64" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PB4(PCINT4/ADC11)"/>
+<wire x1="-30.48" y1="20.32" x2="-17.78" y2="20.32" width="0.1524" layer="91"/>
+<label x="-17.78" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R3SWTCH" class="0">
@@ -15460,7 +15211,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="D15" gate="D$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD7(T0/OC4D/ADC10)"/>
+<pinref part="MCU" gate="G$1" pin="PD7(T0/OC4D/ADC10)"/>
 <wire x1="-30.48" y1="38.1" x2="-17.78" y2="38.1" width="0.1524" layer="91"/>
 <label x="-17.78" y="38.1" size="1.778" layer="95"/>
 </segment>
@@ -15472,36 +15223,27 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <wire x1="-203.2" y1="71.12" x2="-205.74" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<wire x1="58.42" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="20.32" x2="53.34" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="UGLOW4" gate="G$1" pin="DIN"/>
-<wire x1="48.26" y1="22.86" x2="53.34" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="UGLOW3" gate="G$1" pin="DOUT"/>
-</segment>
-</net>
 <net name="N$25" class="0">
 <segment>
-<wire x1="81.28" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="22.86" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="20.32" x2="91.44" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="48.514" y1="22.86" x2="53.34" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="22.86" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="20.32" x2="59.69" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="UGLOW3" gate="G$1" pin="DIN"/>
 <pinref part="UGLOW2" gate="G$1" pin="DOUT"/>
 </segment>
 </net>
 <net name="N$39" class="0">
 <segment>
-<wire x1="114.3" y1="22.86" x2="119.38" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="22.86" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="20.32" x2="124.46" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="82.55" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="22.86" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="20.32" x2="91.694" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="UGLOW2" gate="G$1" pin="DIN"/>
 <pinref part="UGLOW1" gate="G$1" pin="DOUT"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="XTAL2"/>
+<pinref part="MCU" gate="G$1" pin="XTAL2"/>
 <wire x1="-93.98" y1="33.02" x2="-96.52" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="33.02" x2="-96.52" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="30.48" x2="-101.6" y2="30.48" width="0.1524" layer="91"/>
@@ -15522,14 +15264,14 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <net name="N$7" class="0">
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="22.86" x2="149.86" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="22.86" x2="149.86" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="114.554" y1="22.86" x2="116.84" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="22.86" x2="116.84" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="UGLOW1" gate="G$1" pin="DIN"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PE2(!HWB)"/>
+<pinref part="MCU" gate="G$1" pin="PE2(!HWB)"/>
 <wire x1="-93.98" y1="27.94" x2="-96.52" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="27.94" x2="-96.52" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="22.86" x2="-99.06" y2="22.86" width="0.1524" layer="91"/>
@@ -15575,7 +15317,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </net>
 <net name="N$26" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="RSET"/>
+<pinref part="DRIVER" gate="G$1" pin="RSET"/>
 <pinref part="RESET" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="-58.42" x2="-22.86" y2="-58.42" width="0.1524" layer="91"/>
 </segment>
@@ -15588,7 +15330,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
-<pinref part="IC1" gate="G$1" pin="PVCC_1"/>
+<pinref part="DRIVER" gate="G$1" pin="PVCC_1"/>
 <wire x1="-45.72" y1="-101.6" x2="-45.72" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="-104.14" x2="-27.94" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="-104.14" x2="-27.94" y2="-99.06" width="0.1524" layer="91"/>
@@ -15596,21 +15338,11 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <junction x="-20.32" y="-99.06"/>
 </segment>
 </net>
-<net name="1" class="0">
-<segment>
-<wire x1="-20.32" y1="-114.3" x2="-20.32" y2="-109.22" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="-109.22" x2="-12.7" y2="-109.22" width="0.1524" layer="91"/>
-<junction x="-20.32" y="-109.22"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<pinref part="C14" gate="G$1" pin="1"/>
-<pinref part="X_16" gate="G$1" pin="0"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
 <wire x1="-60.96" y1="-33.02" x2="-58.42" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="IICRST"/>
+<pinref part="DRIVER" gate="G$1" pin="IICRST"/>
 <wire x1="-58.42" y1="-33.02" x2="-58.42" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15638,86 +15370,219 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <pinref part="R8" gate="G$1" pin="1"/>
 </segment>
 </net>
+<net name="GND" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="-20.32" y1="-88.9" x2="-20.32" y2="-83.82" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="-20.32" y1="-83.82" x2="-12.7" y2="-83.82" width="0.1524" layer="91"/>
+<junction x="-20.32" y="-83.82"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="DRIVER" gate="G$1" pin="AGND"/>
+<wire x1="-25.4" y1="-60.96" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-60.96" x2="-7.62" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="RESET" gate="G$1" pin="2"/>
+<wire x1="-12.7" y1="-58.42" x2="-7.62" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-58.42" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
+<junction x="-7.62" y="-60.96"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-20.32" y1="-114.3" x2="-20.32" y2="-109.22" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="-109.22" x2="-12.7" y2="-109.22" width="0.1524" layer="91"/>
+<junction x="-20.32" y="-109.22"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<pinref part="C14" gate="G$1" pin="1"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="DRIVER" gate="G$1" pin="PGND_2"/>
+<wire x1="-71.12" y1="-83.82" x2="-73.66" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-83.82" x2="-73.66" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="DRIVER" gate="G$1" pin="PGND_1"/>
+<wire x1="-71.12" y1="-66.04" x2="-73.66" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-66.04" x2="-73.66" y2="-83.82" width="0.1524" layer="91"/>
+<junction x="-73.66" y="-83.82"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C15" gate="G$1" pin="1"/>
+<wire x1="-30.48" y1="-27.94" x2="-30.48" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-73.66" y1="-38.1" x2="-73.66" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="DRIVER" gate="G$1" pin="GND_2"/>
+<wire x1="-63.5" y1="-38.1" x2="-63.5" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-35.56" x2="-63.5" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="DRIVER" gate="G$1" pin="GND_1"/>
+<wire x1="-63.5" y1="-35.56" x2="-60.96" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-35.56" x2="-60.96" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="-63.5" y="-35.56"/>
+<junction x="-73.66" y="-35.56"/>
+<wire x1="-73.66" y1="-33.02" x2="-73.66" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="-71.12" y1="-33.02" x2="-73.66" y2="-33.02" width="0.1524" layer="91"/>
+<pinref part="DRIVER" gate="G$1" pin="ADDR2"/>
+<wire x1="-50.8" y1="-38.1" x2="-50.8" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-35.56" x2="-60.96" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-60.96" y="-35.56"/>
+<pinref part="DRIVER" gate="G$1" pin="ADDR1"/>
+<wire x1="-48.26" y1="-38.1" x2="-48.26" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="-35.56" x2="-50.8" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-50.8" y="-35.56"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-93.98" y1="10.16" x2="-114.3" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="10.16" x2="-114.3" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-111.76" y1="17.78" x2="-114.3" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="17.78" x2="-114.3" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-114.3" y="10.16"/>
+<wire x1="-114.3" y1="12.7" x2="-114.3" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="12.7" x2="-96.52" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-114.3" y="12.7"/>
+<wire x1="-96.52" y1="12.7" x2="-114.3" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="15.24" x2="-96.52" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="15.24" x2="-96.52" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-96.52" y="12.7"/>
+<wire x1="-93.98" y1="17.78" x2="-96.52" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="17.78" x2="-96.52" y2="15.24" width="0.1524" layer="91"/>
+<junction x="-96.52" y="15.24"/>
+<wire x1="-93.98" y1="20.32" x2="-96.52" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="20.32" x2="-96.52" y2="17.78" width="0.1524" layer="91"/>
+<junction x="-96.52" y="17.78"/>
+<pinref part="MCU" gate="G$1" pin="UGND"/>
+<pinref part="MCU" gate="G$1" pin="GND@1"/>
+<pinref part="MCU" gate="G$1" pin="GND@2"/>
+<pinref part="MCU" gate="G$1" pin="GND@3"/>
+<pinref part="MCU" gate="G$1" pin="GND@4"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-114.3" y1="30.48" x2="-116.84" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="30.48" x2="-116.84" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="-116.84" y1="35.56" x2="-116.84" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="40.64" x2="-114.3" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="P$1"/>
+<wire x1="-105.664" y1="35.56" x2="-116.84" y2="35.56" width="0.1524" layer="91"/>
+<junction x="-116.84" y="35.56"/>
+<wire x1="-116.84" y1="35.56" x2="-121.92" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="35.56" x2="-121.92" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="-111.76" y1="55.88" x2="-116.84" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="55.88" x2="-116.84" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-111.76" y1="78.74" x2="-114.3" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="78.74" x2="-114.3" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="SW2" gate="G$1" pin="1"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="1"/>
+<wire x1="-162.56" y1="63.5" x2="-165.1" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-165.1" y1="63.5" x2="-165.1" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-190.5" y1="60.96" x2="-190.5" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="-193.04" y1="73.66" x2="-190.5" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-190.5" y1="73.66" x2="-190.5" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="GND"/>
+<wire x1="-190.5" y1="71.12" x2="-190.5" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-190.5" y1="63.5" x2="-190.5" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-205.74" y1="60.96" x2="-190.5" y2="60.96" width="0.1524" layer="91"/>
+<junction x="-190.5" y="60.96"/>
+<pinref part="FB2" gate="G$1" pin="2"/>
+<wire x1="-193.04" y1="63.5" x2="-190.5" y2="63.5" width="0.1524" layer="91"/>
+<junction x="-190.5" y="63.5"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-193.04" y1="71.12" x2="-190.5" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-190.5" y="71.12"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="83.82" y1="7.62" x2="83.82" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="12.7" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="20.32" x2="48.514" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="82.55" y1="20.32" x2="83.82" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="20.32" x2="83.82" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="114.554" y1="20.32" x2="116.84" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="20.32" x2="116.84" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="12.7" x2="83.82" y2="12.7" width="0.1524" layer="91"/>
+<junction x="83.82" y="12.7"/>
+<pinref part="UGLOW3" gate="G$1" pin="GND"/>
+<pinref part="UGLOW2" gate="G$1" pin="GND"/>
+<pinref part="UGLOW1" gate="G$1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="73.66" y1="35.56" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="C21" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="35.56" x2="73.66" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="40.64" y1="35.56" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="C20" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="35.56" x2="40.64" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="7.62" y1="35.56" x2="7.62" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="C19" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="35.56" x2="7.62" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C13" gate="G$1" pin="2"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="-165.1" y1="12.7" x2="-157.48" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="-157.48" y1="12.7" x2="-149.86" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-157.48" y="12.7"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="-149.86" y1="12.7" x2="-142.24" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-149.86" y="12.7"/>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="-142.24" y1="12.7" x2="-134.62" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-142.24" y="12.7"/>
+<wire x1="-149.86" y1="12.7" x2="-149.86" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="GND18" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="-22.86" y1="-48.26" x2="-22.86" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-45.72" x2="-12.7" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="-12.7" y1="-45.72" x2="-12.7" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="-22.86" y1="-43.18" x2="-22.86" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-45.72"/>
+</segment>
+</net>
+<net name="N$40" class="0">
+<segment>
+<pinref part="SP1" gate="G$1" pin="-"/>
+<wire x1="-185.42" y1="15.24" x2="-195.58" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-195.58" y1="15.24" x2="-195.58" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,60.96,15.24,J1,GND,0,,,"/>
-<approved hash="104,1,60.96,35.56,J1,VBUS,VUSB,,,"/>
-<approved hash="104,1,25.4,73.66,GLOW4,VDD,VCC,,,"/>
-<approved hash="104,1,48.26,71.12,GLOW4,GND,0,,,"/>
-<approved hash="104,1,58.42,73.66,GLOW3,VDD,VCC,,,"/>
-<approved hash="104,1,81.28,71.12,GLOW3,GND,0,,,"/>
-<approved hash="104,1,91.44,73.66,GLOW2,VDD,VCC,,,"/>
-<approved hash="104,1,114.3,71.12,GLOW2,GND,0,,,"/>
-<approved hash="104,1,124.46,73.66,GLOW1,VDD,VCC,,,"/>
-<approved hash="104,1,147.32,71.12,GLOW1,GND,0,,,"/>
-<approved hash="104,1,-105.664,38.1,Q1,P$1,0,,,"/>
-<approved hash="104,1,27.94,-20.32,LED1,R,R0RED,,,"/>
-<approved hash="104,1,45.72,-22.86,LED1,VIN,C0RGB,,,"/>
-<approved hash="104,1,55.88,-20.32,LED2,R,R0RED,,,"/>
-<approved hash="104,1,73.66,-22.86,LED2,VIN,C1RGB,,,"/>
-<approved hash="104,1,27.94,-40.64,LED5,R,R1RED,,,"/>
-<approved hash="104,1,45.72,-43.18,LED5,VIN,C0RGB,,,"/>
-<approved hash="104,1,55.88,-40.64,LED6,R,R1RED,,,"/>
-<approved hash="104,1,73.66,-43.18,LED6,VIN,C1RGB,,,"/>
-<approved hash="104,1,83.82,-20.32,LED3,R,R0RED,,,"/>
-<approved hash="104,1,101.6,-22.86,LED3,VIN,C2RGB,,,"/>
-<approved hash="104,1,111.76,-20.32,LED4,R,R0RED,,,"/>
-<approved hash="104,1,129.54,-22.86,LED4,VIN,C3RGB,,,"/>
-<approved hash="104,1,83.82,-40.64,LED7,R,R1RED,,,"/>
-<approved hash="104,1,101.6,-43.18,LED7,VIN,C2RGB,,,"/>
-<approved hash="104,1,111.76,-40.64,LED8,R,R1RED,,,"/>
-<approved hash="104,1,129.54,-43.18,LED8,VIN,C3RGB,,,"/>
-<approved hash="104,1,27.94,-60.96,LED9,R,R2RED,,,"/>
-<approved hash="104,1,45.72,-63.5,LED9,VIN,C0RGB,,,"/>
-<approved hash="104,1,55.88,-60.96,LED10,R,R2RED,,,"/>
-<approved hash="104,1,73.66,-63.5,LED10,VIN,C1RGB,,,"/>
-<approved hash="104,1,27.94,-81.28,LED13,R,R3RED,,,"/>
-<approved hash="104,1,45.72,-83.82,LED13,VIN,C0RGB,,,"/>
-<approved hash="104,1,55.88,-81.28,LED14,R,R3RED,,,"/>
-<approved hash="104,1,73.66,-83.82,LED14,VIN,C1RGB,,,"/>
-<approved hash="104,1,83.82,-60.96,LED11,R,R2RED,,,"/>
-<approved hash="104,1,101.6,-63.5,LED11,VIN,C2RGB,,,"/>
-<approved hash="104,1,111.76,-60.96,LED12,R,R2RED,,,"/>
-<approved hash="104,1,129.54,-63.5,LED12,VIN,C3RGB,,,"/>
-<approved hash="104,1,83.82,-81.28,LED15,R,R3RED,,,"/>
-<approved hash="104,1,101.6,-83.82,LED15,VIN,C2RGB,,,"/>
-<approved hash="104,1,111.76,-81.28,LED16,R,R3RED,,,"/>
-<approved hash="104,1,129.54,-83.82,LED16,VIN,C3RGB,,,"/>
-<approved hash="206,1,83.82,-22.86,R0GREEN,,,,,"/>
-<approved hash="206,1,111.76,-22.86,R0GREEN,,,,,"/>
-<approved hash="206,1,27.94,-22.86,R0GREEN,,,,,"/>
-<approved hash="206,1,55.88,-22.86,R0GREEN,,,,,"/>
-<approved hash="206,1,111.76,-43.18,R1GREEN,,,,,"/>
-<approved hash="206,1,83.82,-43.18,R1GREEN,,,,,"/>
-<approved hash="206,1,55.88,-43.18,R1GREEN,,,,,"/>
-<approved hash="206,1,27.94,-43.18,R1GREEN,,,,,"/>
-<approved hash="206,1,83.82,-63.5,R2GREEN,,,,,"/>
-<approved hash="206,1,111.76,-63.5,R2GREEN,,,,,"/>
-<approved hash="206,1,27.94,-63.5,R2GREEN,,,,,"/>
-<approved hash="206,1,55.88,-63.5,R2GREEN,,,,,"/>
-<approved hash="206,1,111.76,-83.82,R3GREEN,,,,,"/>
-<approved hash="206,1,83.82,-83.82,R3GREEN,,,,,"/>
-<approved hash="206,1,55.88,-83.82,R3GREEN,,,,,"/>
-<approved hash="206,1,27.94,-83.82,R3GREEN,,,,,"/>
-<approved hash="113,1,-236.72,-33.02,D0,,,,,"/>
-<approved hash="113,1,-213.86,-33.02,D1,,,,,"/>
-<approved hash="113,1,-191,-33.02,D2,,,,,"/>
-<approved hash="113,1,-168.14,-33.02,D3,,,,,"/>
-<approved hash="113,1,-236.72,-58.42,D4,,,,,"/>
-<approved hash="113,1,-213.86,-58.42,D5,,,,,"/>
-<approved hash="113,1,-191,-58.42,D6,,,,,"/>
-<approved hash="113,1,-168.14,-58.42,D7,,,,,"/>
-<approved hash="113,1,-236.72,-83.82,D8,,,,,"/>
-<approved hash="113,1,-213.86,-83.82,D9,,,,,"/>
-<approved hash="113,1,-190.6,-83.82,D10,,,,,"/>
-<approved hash="113,1,-167.834,-83.82,D11,,,,,"/>
-<approved hash="113,1,-236.32,-109.22,D12,,,,,"/>
-<approved hash="113,1,-213.46,-109.22,D13,,,,,"/>
-<approved hash="113,1,-190.6,-109.22,D14,,,,,"/>
-<approved hash="113,1,-167.74,-109.22,D15,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
