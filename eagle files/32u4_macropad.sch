@@ -13825,6 +13825,9 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <text x="-93.98" y="-116.84" size="1.778" layer="94">LED DRIVER</text>
 <text x="-205.74" y="4.572" size="1.778" layer="94">SMD_BUZZER</text>
 <text x="-215.9" y="58.42" size="1.778" layer="94">USB-C PORT</text>
+<text x="2.54" y="68.58" size="5.08" layer="94">Made by Stefano Nicolis
+Thiird@Github for license</text>
+<text x="2.54" y="60.96" size="5.08" layer="94">Credit to KeyboardAtelier@Discord</text>
 </plain>
 <instances>
 <instance part="D0" gate="D$1" x="-190.5" y="-27.94" smashed="yes" rot="R270">
@@ -13846,8 +13849,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="VALUE" x="-190.5" y="32.512" size="2.54" layer="94" font="vector" rot="R180" align="center"/>
 </instance>
 <instance part="MCU" gate="G$1" x="-60.96" y="48.26" smashed="yes">
-<attribute name="NAME" x="-88.9" y="86.36" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-78.232" y="82.042" size="1.778" layer="96"/>
+<attribute name="VALUE" x="-65.786" y="37.592" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R7" gate="G$1" x="-101.6" y="50.8" smashed="yes">
 <attribute name="NAME" x="-107.188" y="51.054" size="1.778" layer="95"/>
@@ -13903,8 +13905,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="VALUE" x="-107.95" y="14.478" size="1.778" layer="96"/>
 </instance>
 <instance part="DRIVER" gate="G$1" x="-71.12" y="-55.88" smashed="yes">
-<attribute name="NAME" x="-50.546" y="-76.708" size="1.778" layer="95" rot="R90" align="center-left"/>
-<attribute name="VALUE" x="-45.466" y="-79.502" size="1.778" layer="96" rot="MR90" align="center-left"/>
+<attribute name="VALUE" x="-48.006" y="-79.502" size="1.778" layer="96" rot="MR90" align="center-left"/>
 </instance>
 <instance part="P+3" gate="VCC" x="-71.12" y="-7.62" smashed="yes">
 <attribute name="VALUE" x="-68.58" y="-5.08" size="1.778" layer="96" rot="R180"/>
@@ -14082,7 +14083,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="VALUE" x="110.998" y="30.988" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="U$1" gate="G$1" x="-147.32" y="63.5" smashed="yes">
-<attribute name="NAME" x="-147.32" y="73.66" size="1.27" layer="95" font="vector" align="center"/>
 <attribute name="VALUE" x="-147.32" y="53.975" size="1.27" layer="95" font="vector" align="center"/>
 </instance>
 <instance part="P+1" gate="VCC" x="-139.7" y="88.9" smashed="yes">
@@ -14149,7 +14149,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <attribute name="NAME" x="-147.32" y="86.3346" size="1.778" layer="95" align="center"/>
 </instance>
 <instance part="FUSE" gate="G$1" x="-147.32" y="76.2" smashed="yes">
-<attribute name="NAME" x="-151.13" y="78.74" size="1.778" layer="95"/>
+<attribute name="NAME" x="-150.876" y="72.898" size="1.778" layer="95"/>
 </instance>
 <instance part="FERRITE_USB" gate="G$1" x="-182.88" y="66.04" smashed="yes">
 <attribute name="NAME" x="-182.88" y="68.58" size="1.778" layer="95" align="center"/>
@@ -15587,6 +15587,10 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
