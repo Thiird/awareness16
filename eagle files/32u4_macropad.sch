@@ -15184,9 +15184,9 @@ Thiird@Github for license</text>
 <pinref part="D7" gate="D$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="MCU" gate="G$1" pin="PB7(PCINT7/OC0A/OC1C/!RTS)"/>
-<wire x1="-30.48" y1="12.7" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
-<label x="-17.78" y="12.7" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PD6(T1/ADC9/!OC4D)"/>
+<wire x1="-30.48" y1="40.64" x2="-17.78" y2="40.64" width="0.1524" layer="91"/>
+<label x="-17.78" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R2SWTCH" class="0">
