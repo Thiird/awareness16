@@ -509,16 +509,10 @@
 </package>
 </packages>
 <packages3d>
-<package3d name="SOD-123" urn="urn:adsk.eagle:package:24604486/1" type="box" library_version="1" library_locally_modified="yes">
+<package3d name="SOD-123" urn="urn:adsk.eagle:package:24604486/3" type="model" library_version="4">
 <description>SOD-123 footprint</description>
 <packageinstances>
 <packageinstance name="SOD-123"/>
-</packageinstances>
-</package3d>
-<package3d name="SOD-323" urn="urn:adsk.eagle:package:24604492/1" type="box" library_version="1" library_locally_modified="yes">
-<description>SOD-123 footprint</description>
-<packageinstances>
-<packageinstance name="SOD-323"/>
 </packageinstances>
 </package3d>
 <package3d name="DO-35" urn="urn:adsk.eagle:package:24604491/1" type="box" library_version="1" library_locally_modified="yes">
@@ -549,7 +543,7 @@
 <packageinstance name="CST-2"/>
 </packageinstances>
 </package3d>
-<package3d name="R0603" urn="urn:adsk.eagle:package:24604482/1" type="box" library_version="1" library_locally_modified="yes">
+<package3d name="R0603" urn="urn:adsk.eagle:package:24604482/2" type="model" library_version="1" library_locally_modified="yes">
 <packageinstances>
 <packageinstance name="R0603"/>
 </packageinstances>
@@ -601,6 +595,12 @@
 <packageinstance name="C0402"/>
 </packageinstances>
 </package3d>
+<package3d name="SOD-323" urn="urn:adsk.eagle:package:24604492/3" type="model" library_version="4">
+<description>SOD-123 footprint</description>
+<packageinstances>
+<packageinstance name="SOD-323"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="DIODE" urn="urn:adsk.eagle:symbol:24604460/1" library_version="1" library_locally_modified="yes">
@@ -638,7 +638,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DIODE" urn="urn:adsk.eagle:component:24604506/1" prefix="D" uservalue="yes" library_version="1" library_locally_modified="yes">
+<deviceset name="DIODE" urn="urn:adsk.eagle:component:24604506/4" prefix="D" uservalue="yes" library_version="4">
 <description>Standard 1N4148 diode</description>
 <gates>
 <gate name="D$1" symbol="DIODE" x="0" y="0"/>
@@ -650,7 +650,7 @@
 <connect gate="D$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:24604492/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:24604492/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -724,7 +724,7 @@
 <connect gate="D$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:24604486/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:24604486/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -732,7 +732,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="RESISTOR" urn="urn:adsk.eagle:component:24604504/1" prefix="R" uservalue="yes" library_version="1" library_locally_modified="yes">
+<deviceset name="RESISTOR" urn="urn:adsk.eagle:component:24604504/2" prefix="R" uservalue="yes" library_version="2">
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
@@ -743,7 +743,7 @@
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:24604482/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:24604482/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -811,7 +811,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="CAPACITOR" urn="urn:adsk.eagle:component:24604510/1" locally_modified="yes" prefix="C" uservalue="yes" library_version="1" library_locally_modified="yes">
+<deviceset name="CAPACITOR" urn="urn:adsk.eagle:component:24604510/2" prefix="C" uservalue="yes" library_version="2">
 <gates>
 <gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
@@ -1353,7 +1353,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="SPEAKER" urn="urn:adsk.eagle:component:24167716/1" locally_modified="yes" prefix="SP" library_version="1" library_locally_modified="yes">
+<deviceset name="SPEAKER" urn="urn:adsk.eagle:component:24167716/2" prefix="SP" library_version="2">
 <gates>
 <gate name="G$1" symbol="SPEAKER" x="0" y="0"/>
 </gates>
@@ -6017,7 +6017,7 @@ Source: &lt;a href="https://mouser.componentsearchengine.com/Datasheets/1/IS31FL
 <text x="0" y="-2.8" size="1" layer="21" font="vector" ratio="13" align="center">&gt;NAME</text>
 <text x="0" y="-2.8" size="1" layer="22" font="vector" ratio="13" rot="MR0" align="center">&gt;NAME</text>
 </package>
-<package name="MX-1U">
+<package name="MX-1U" urn="urn:adsk.eagle:footprint:24791916/1">
 <description>Keyboard switch package!</description>
 <wire x1="-7" y1="7" x2="7" y2="7" width="0.125" layer="47"/>
 <wire x1="7" y1="7" x2="7" y2="-7" width="0.125" layer="47"/>
@@ -12154,16 +12154,16 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 </library>
 <library name="6028LED" urn="urn:adsk.eagle:library:24393151">
 <packages>
-<package name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:footprint:24393153/1" library_version="1">
+<package name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:footprint:24393153/4" library_version="9">
 <wire x1="-1.75" y1="-1.55" x2="1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="1.75" y1="-1.55" x2="1.75" y2="1.55" width="0.001" layer="20"/>
-<wire x1="1.75" y1="1.55" x2="-1.75" y2="1.55" width="0.001" layer="20"/>
 <wire x1="-1.75" y1="1.55" x2="-1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="-1.778" y1="1.778" x2="1.778" y2="1.778" width="0.1016" layer="26"/>
 <wire x1="-1.778" y1="-1.778" x2="1.778" y2="-1.778" width="0.1016" layer="26"/>
 <wire x1="2.65" y1="-1.3" x2="3.55" y2="-1.3" width="0.1" layer="26"/>
 <wire x1="3.55" y1="-1.3" x2="3.55" y2="-0.2" width="0.1" layer="26"/>
 <wire x1="3.55" y1="-0.2" x2="2.65" y2="-0.2" width="0.1" layer="26"/>
+<wire x1="-1.75" y1="1.55" x2="1.75" y2="1.55" width="0.001" layer="20"/>
 <smd name="P$1" x="-2.628" y="0.75" dx="1.35" dy="0.635" layer="16"/>
 <smd name="P$2" x="-2.628" y="-0.75" dx="1.35" dy="0.635" layer="16"/>
 <smd name="P$3" x="2.628" y="-0.75" dx="1.35" dy="0.635" layer="16"/>
@@ -12192,13 +12192,12 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <vertex x="3.4" y="0.34"/>
 <vertex x="3.4" y="1.16"/>
 </polygon>
-<rectangle x1="-1.75" y1="-1.55" x2="1.75" y2="1.55" layer="30"/>
 <rectangle x1="-1.75" y1="-1.55" x2="1.75" y2="1.55" layer="29"/>
 <text x="-1.524" y="2.032" size="0.6096" layer="26">&gt;NAME</text>
 </package>
 </packages>
 <packages3d>
-<package3d name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:package:24393156/2" type="model" library_version="2">
+<package3d name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:package:24393156/6" type="model" library_version="9">
 <packageinstances>
 <packageinstance name="6028RGBLED_BOTTOM"/>
 </packageinstances>
@@ -12219,7 +12218,7 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="6028RGBLED" urn="urn:adsk.eagle:component:24393157/2" library_version="2">
+<deviceset name="6028RGBLED" urn="urn:adsk.eagle:component:24393157/6" library_version="9">
 <gates>
 <gate name="G$1" symbol="6028RGBLED" x="-0.254" y="-1.016"/>
 </gates>
@@ -12232,7 +12231,7 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <connect gate="G$1" pin="VIN" pad="P$3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:24393156/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:24393156/6"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -13817,13 +13816,13 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </class>
 </classes>
 <parts>
-<part name="D0" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
+<part name="D0" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
 <part name="J1" library="TYPE-C-31-M-12" library_urn="urn:adsk.eagle:library:24393131" deviceset="TYPE-C-31-M-12" device="" package3d_urn="urn:adsk.eagle:package:24393136/2"/>
-<part name="R1" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" override_package3d_urn="urn:adsk.eagle:package:24602074/2" override_package_urn="urn:adsk.eagle:footprint:24602075/1" override_locally_modified="yes" value="5.1k"/>
-<part name="R2" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="5.1k"/>
+<part name="R1" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" override_package3d_urn="urn:adsk.eagle:package:24602074/2" override_package_urn="urn:adsk.eagle:footprint:24602075/1" override_locally_modified="yes" value="5.1k"/>
+<part name="R2" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="5.1k"/>
 <part name="SP1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" deviceset="SPEAKER" device="-SMD-11X9" package3d_urn="urn:adsk.eagle:package:24167638/3" value="SPEAKER-11X9"/>
 <part name="MCU" library="OPL_IC" library_urn="urn:adsk.eagle:library:8004595" deviceset="MCU-ATMEGA32U4-AU(TQFP44)" device="" package3d_urn="urn:adsk.eagle:package:8004785/1" override_package3d_urn="urn:adsk.eagle:package:24602988/2" override_package_urn="urn:adsk.eagle:footprint:8004774/1" value="ATMEGA32U4-TQFP44"/>
-<part name="R7" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="22"/>
+<part name="R7" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="22"/>
 <part name="C9" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="1uF"/>
 <part name="C6" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.1uF"/>
 <part name="C10" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.1uF"/>
@@ -13833,15 +13832,15 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="SW2" library="Controller" deviceset="SWITCH-SMD" device="-EVP-BB2A9B00"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="R3" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="10k"/>
-<part name="C1" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" override_package3d_urn="urn:adsk.eagle:package:24603007/2" override_package_urn="urn:adsk.eagle:footprint:24603008/1" override_locally_modified="yes" value="22uF"/>
-<part name="C2" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="22uF"/>
-<part name="R4" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="10k"/>
+<part name="R3" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="10k"/>
+<part name="C1" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" override_package3d_urn="urn:adsk.eagle:package:24603007/2" override_package_urn="urn:adsk.eagle:footprint:24603008/1" override_locally_modified="yes" value="22pF"/>
+<part name="C2" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="22pF"/>
+<part name="R4" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="10k"/>
 <part name="DRIVER" library="IS31FL3733-TQLS4" library_urn="urn:adsk.eagle:library:24185069" deviceset="IS31FL3733-TQLS4" device="" package3d_urn="urn:adsk.eagle:package:24185072/2" override_package3d_urn="urn:adsk.eagle:package:24602141/2" override_package_urn="urn:adsk.eagle:footprint:24185070/1"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="R5" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="4.7k"/>
-<part name="R6" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="4.7k"/>
-<part name="R11" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" override_package3d_urn="urn:adsk.eagle:package:24602976/2" override_package_urn="urn:adsk.eagle:footprint:24602977/1" override_locally_modified="yes" value="100k"/>
+<part name="R5" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="4.7k"/>
+<part name="R6" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="4.7k"/>
+<part name="R11" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" override_package3d_urn="urn:adsk.eagle:package:24602976/2" override_package_urn="urn:adsk.eagle:footprint:24602977/1" override_locally_modified="yes" value="100k"/>
 <part name="C5" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.47uF"/>
 <part name="C7" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.1uF"/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
@@ -13850,21 +13849,21 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="C3" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.47uF"/>
 <part name="C4" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.1uF"/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="D1" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D2" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D3" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D4" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D5" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D6" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D7" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D8" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D9" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D10" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1" override_package3d_urn="urn:adsk.eagle:package:24603021/2" override_package_urn="urn:adsk.eagle:footprint:24603022/1" override_locally_modified="yes"/>
-<part name="D11" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D12" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D13" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D14" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
-<part name="D15" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/1"/>
+<part name="D1" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D2" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D3" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D4" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D5" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D6" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D7" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D8" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D9" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D10" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3" override_package3d_urn="urn:adsk.eagle:package:24603021/2" override_package_urn="urn:adsk.eagle:footprint:24603022/1" override_locally_modified="yes"/>
+<part name="D11" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D12" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D13" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D14" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
+<part name="D15" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="DIODE" device="-SOD-123" package3d_urn="urn:adsk.eagle:package:24604486/3"/>
 <part name="F1" library="Keyboard" deviceset="KEYSWITCH-PLAIN" device="-MX-1U"/>
 <part name="F2" library="Keyboard" deviceset="KEYSWITCH-PLAIN" device="-MX-1U"/>
 <part name="F3" library="Keyboard" deviceset="KEYSWITCH-PLAIN" device="-MX-1U"/>
@@ -13886,37 +13885,37 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="C20" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="100nF"/>
 <part name="C21" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="100nF"/>
 <part name="Q1" library="crystal-geyer_V1_0_NIC" deviceset="KX" device="-5" package3d_urn="urn:adsk.eagle:package:11926/1" value="16MHz"/>
-<part name="R12" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="500"/>
+<part name="R12" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="500"/>
 <part name="U$1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" deviceset="PRTR5V0U2X" device="" package3d_urn="urn:adsk.eagle:package:24167658/1" override_package3d_urn="urn:adsk.eagle:package:24602101/2" override_package_urn="urn:adsk.eagle:footprint:24167540/1"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB4" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB5" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB6" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB7" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB8" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB9" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB10" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB11" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB15" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB14" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/2"/>
-<part name="SK6812MINI-E" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/2"/>
+<part name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB4" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB5" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB6" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB7" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB8" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB9" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB10" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB11" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB15" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB14" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:24393151" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:24393156/6"/>
+<part name="UGLOW3" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/2"/>
 <part name="UGLOW2" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/2"/>
 <part name="UGLOW1" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/2"/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="FERRITE_VCC" library="Filter" library_urn="urn:adsk.eagle:library:16378195" deviceset="FB" device="CHIP-0603(1608-METRIC)" package3d_urn="urn:adsk.eagle:package:16378199/1" value="FERRITE_BEAD"/>
 <part name="FUSE" library="polyfuse-smd_20" deviceset="?" device="0603L" technology="050"/>
 <part name="FERRITE_USB" library="Filter" library_urn="urn:adsk.eagle:library:16378195" deviceset="FB" device="CHIP-0603(1608-METRIC)" package3d_urn="urn:adsk.eagle:package:16378199/1" value="FERRITE_BEAD"/>
-<part name="RESET" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="20k"/>
+<part name="RESET" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="20k"/>
 <part name="C8" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.47uF"/>
 <part name="C14" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="CAPACITOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604501/2" value="0.1uF"/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="R8" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/1" value="22"/>
+<part name="R8" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/2" value="22"/>
 <part name="GND" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -13988,9 +13987,6 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <text x="-93.98" y="-116.84" size="1.778" layer="94">LED DRIVER</text>
 <text x="-205.74" y="4.572" size="1.778" layer="94">SMD_BUZZER</text>
 <text x="-215.9" y="58.42" size="1.778" layer="94">USB-C PORT</text>
-<text x="2.54" y="68.58" size="5.08" layer="94">Made by Stefano Nicolis
-Thiird@Github for license</text>
-<text x="2.54" y="60.96" size="5.08" layer="94">Credit to KeyboardAtelier@Discord</text>
 </plain>
 <instances>
 <instance part="D0" gate="D$1" x="-190.5" y="-27.94" smashed="yes" rot="R270">
@@ -14298,7 +14294,7 @@ Thiird@Github for license</text>
 <instance part="RGB16" gate="G$1" x="116.84" y="-81.28" smashed="yes">
 <attribute name="NAME" x="113.792" y="-75.692" size="1.778" layer="95"/>
 </instance>
-<instance part="SK6812MINI-E" gate="G$1" x="36.83" y="16.51" smashed="yes">
+<instance part="UGLOW3" gate="G$1" x="36.83" y="16.51" smashed="yes">
 <attribute name="NAME" x="4.826" y="40.64" size="1.778" layer="95" rot="MR180"/>
 </instance>
 <instance part="UGLOW2" gate="G$1" x="69.85" y="16.51" smashed="yes"/>
@@ -14421,7 +14417,7 @@ Thiird@Github for license</text>
 <pinref part="C19" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="27.94" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
 <junction x="22.86" y="27.94"/>
-<pinref part="SK6812MINI-E" gate="G$1" pin="VDD"/>
+<pinref part="UGLOW3" gate="G$1" pin="VDD"/>
 <wire x1="25.4" y1="17.78" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="17.78" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="33.02" x2="48.26" y2="33.02" width="0.1524" layer="91"/>
@@ -15405,7 +15401,7 @@ Thiird@Github for license</text>
 <wire x1="48.26" y1="17.78" x2="53.34" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="17.78" x2="53.34" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="15.24" x2="58.42" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="SK6812MINI-E" gate="G$1" pin="DIN"/>
+<pinref part="UGLOW3" gate="G$1" pin="DIN"/>
 <pinref part="UGLOW2" gate="G$1" pin="DOUT"/>
 </segment>
 </net>
@@ -15643,7 +15639,7 @@ Thiird@Github for license</text>
 <wire x1="116.84" y1="15.24" x2="116.84" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="10.16" x2="83.82" y2="10.16" width="0.1524" layer="91"/>
 <junction x="83.82" y="10.16"/>
-<pinref part="SK6812MINI-E" gate="G$1" pin="GND"/>
+<pinref part="UGLOW3" gate="G$1" pin="GND"/>
 <pinref part="UGLOW1" gate="G$1" pin="GND"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 <pinref part="UGLOW2" gate="G$1" pin="GND"/>
@@ -15750,10 +15746,6 @@ Thiird@Github for license</text>
 </schematic>
 </drawing>
 <compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
