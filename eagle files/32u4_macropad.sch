@@ -1872,8 +1872,7 @@
 </packages>
 <packages3d>
 <package3d name="QFP50P900X900X120-49N" urn="urn:adsk.eagle:package:24185072/8" type="empty" library_version="6">
-<description>&lt;b&gt;IS31FL3733-TQLS4-1&lt;/b&gt;&lt;br&gt;
-</description>
+<description>&lt;b&gt;IS31FL3733-TQLS4-1&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFP50P900X900X120-49N"/>
 </packageinstances>
@@ -12152,18 +12151,18 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="SK6812MINI-E">
+<library name="SK6812MINI-E" urn="urn:adsk.eagle:library:27543939">
 <packages>
-<package name="SK6812MINI-E" urn="urn:adsk.eagle:footprint:24737956/1">
+<package name="SK6812MINI-E" urn="urn:adsk.eagle:footprint:27543940/1" library_version="1">
 <wire x1="-1.75" y1="-1.55" x2="1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="1.75" y1="-1.55" x2="1.75" y2="1.55" width="0.001" layer="20"/>
 <wire x1="1.75" y1="1.55" x2="-1.75" y2="1.55" width="0.001" layer="20"/>
 <wire x1="-1.75" y1="1.55" x2="-1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="-1.778" y1="1.778" x2="1.778" y2="1.778" width="0.1016" layer="25"/>
 <wire x1="-1.778" y1="-1.778" x2="1.778" y2="-1.778" width="0.1016" layer="25"/>
-<wire x1="2.65" y1="-1.3" x2="3.55" y2="-1.3" width="0.1" layer="25"/>
-<wire x1="3.55" y1="-1.3" x2="3.55" y2="-0.2" width="0.1" layer="25"/>
-<wire x1="3.55" y1="-0.2" x2="2.65" y2="-0.2" width="0.1" layer="25"/>
+<wire x1="2.65" y1="-1.427" x2="3.677" y2="-1.427" width="0.1" layer="25"/>
+<wire x1="3.677" y1="-1.427" x2="3.677" y2="-0.073" width="0.1" layer="25"/>
+<wire x1="3.677" y1="-0.073" x2="2.65" y2="-0.073" width="0.1" layer="25"/>
 <smd name="P$1" x="-2.628" y="0.75" dx="1.35" dy="0.635" layer="1"/>
 <smd name="P$2" x="-2.628" y="-0.75" dx="1.35" dy="0.635" layer="1"/>
 <smd name="P$3" x="2.628" y="-0.75" dx="1.35" dy="0.635" layer="1"/>
@@ -12195,16 +12194,16 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <rectangle x1="-1.75" y1="-1.55" x2="1.75" y2="1.55" layer="30"/>
 <rectangle x1="-1.75" y1="-1.55" x2="1.75" y2="1.55" layer="29"/>
 </package>
-<package name="SK6812MINI-E_RVRSMOUNT" urn="urn:adsk.eagle:footprint:24737957/1">
+<package name="SK6812MINI-E_RVRSMOUNT" urn="urn:adsk.eagle:footprint:27543941/1" library_version="1">
 <wire x1="-1.75" y1="-1.55" x2="1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="1.75" y1="-1.55" x2="1.75" y2="1.55" width="0.001" layer="20"/>
 <wire x1="1.75" y1="1.55" x2="-1.75" y2="1.55" width="0.001" layer="20"/>
 <wire x1="-1.75" y1="1.55" x2="-1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="-1.778" y1="1.778" x2="1.778" y2="1.778" width="0.1016" layer="26"/>
 <wire x1="-1.778" y1="-1.778" x2="1.778" y2="-1.778" width="0.1016" layer="26"/>
-<wire x1="2.65" y1="-1.3" x2="3.55" y2="-1.3" width="0.1" layer="26"/>
-<wire x1="3.55" y1="-1.3" x2="3.55" y2="-0.2" width="0.1" layer="26"/>
-<wire x1="3.55" y1="-0.2" x2="2.65" y2="-0.2" width="0.1" layer="26"/>
+<wire x1="2.65" y1="-1.427" x2="3.677" y2="-1.427" width="0.1" layer="26"/>
+<wire x1="3.677" y1="-1.427" x2="3.677" y2="-0.073" width="0.1" layer="26"/>
+<wire x1="3.677" y1="-0.073" x2="2.65" y2="-0.073" width="0.1" layer="26"/>
 <smd name="P$1" x="-2.628" y="0.75" dx="1.35" dy="0.635" layer="16"/>
 <smd name="P$2" x="-2.628" y="-0.75" dx="1.35" dy="0.635" layer="16"/>
 <smd name="P$3" x="2.628" y="-0.75" dx="1.35" dy="0.635" layer="16"/>
@@ -12238,19 +12237,19 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 </package>
 </packages>
 <packages3d>
-<package3d name="SK6812MINI-E" urn="urn:adsk.eagle:package:24737959/3" type="box">
+<package3d name="SK6812MINI-E" urn="urn:adsk.eagle:package:27543944/1" type="box" library_version="1">
 <packageinstances>
 <packageinstance name="SK6812MINI-E"/>
 </packageinstances>
 </package3d>
-<package3d name="SK6812MINI-E_RVRSMOUNT" urn="urn:adsk.eagle:package:24737960/3" type="box">
+<package3d name="SK6812MINI-E_RVRSMOUNT" urn="urn:adsk.eagle:package:27543943/1" type="box" library_version="1">
 <packageinstances>
 <packageinstance name="SK6812MINI-E_RVRSMOUNT"/>
 </packageinstances>
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="SK6812MINI-E" urn="urn:adsk.eagle:symbol:24737958/1">
+<symbol name="SK6812MINI-E" urn="urn:adsk.eagle:symbol:27543942/1" library_version="1">
 <wire x1="-8.89" y1="3.81" x2="-8.89" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="-8.89" y1="-3.81" x2="8.89" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="8.89" y1="-3.81" x2="8.89" y2="3.81" width="0.254" layer="94"/>
@@ -12264,7 +12263,7 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="SK6812MINI-E" urn="urn:adsk.eagle:component:24737961/3">
+<deviceset name="SK6812MINI-E" urn="urn:adsk.eagle:component:27543945/1" library_version="1">
 <gates>
 <gate name="G$1" symbol="SK6812MINI-E" x="-0.254" y="-1.016"/>
 </gates>
@@ -12277,7 +12276,7 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <connect gate="G$1" pin="VDD" pad="P$2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:24737960/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27543943/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -12291,7 +12290,7 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <connect gate="G$1" pin="VDD" pad="P$1"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:24737959/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27543944/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -13719,15 +13718,15 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </library>
 <library name="6028LED" urn="urn:adsk.eagle:library:27487770">
 <packages>
-<package name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:footprint:27487772/1" library_version="2">
+<package name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:footprint:27487772/2" library_version="4">
 <wire x1="-1.75" y1="-1.55" x2="1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="1.75" y1="-1.55" x2="1.75" y2="1.55" width="0.001" layer="20"/>
 <wire x1="-1.75" y1="1.55" x2="-1.75" y2="-1.55" width="0.001" layer="20"/>
 <wire x1="-1.778" y1="1.778" x2="1.778" y2="1.778" width="0.1016" layer="26"/>
 <wire x1="-1.778" y1="-1.778" x2="1.778" y2="-1.778" width="0.1016" layer="26"/>
-<wire x1="2.65" y1="-1.3" x2="3.55" y2="-1.3" width="0.1" layer="26"/>
-<wire x1="3.55" y1="-1.3" x2="3.55" y2="-0.2" width="0.1" layer="26"/>
-<wire x1="3.55" y1="-0.2" x2="2.65" y2="-0.2" width="0.1" layer="26"/>
+<wire x1="2.65" y1="-1.427" x2="3.677" y2="-1.427" width="0.1" layer="26"/>
+<wire x1="3.677" y1="-1.427" x2="3.677" y2="-0.073" width="0.1" layer="26"/>
+<wire x1="3.677" y1="-0.073" x2="2.65" y2="-0.073" width="0.1" layer="26"/>
 <wire x1="-1.75" y1="1.55" x2="1.75" y2="1.55" width="0.001" layer="20"/>
 <smd name="P$4" x="-2.628" y="0.75" dx="1.35" dy="0.635" layer="16"/>
 <smd name="P$2" x="-2.628" y="-0.75" dx="1.35" dy="0.635" layer="16"/>
@@ -13762,7 +13761,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </package>
 </packages>
 <packages3d>
-<package3d name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:package:27487774/1" type="empty" library_version="2">
+<package3d name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:package:27487774/2" type="empty" library_version="4">
 <packageinstances>
 <packageinstance name="6028RGBLED_BOTTOM"/>
 </packageinstances>
@@ -13783,7 +13782,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="6028RGBLED" urn="urn:adsk.eagle:component:27487776/1" library_version="2">
+<deviceset name="6028RGBLED" urn="urn:adsk.eagle:component:27487776/2" library_version="4">
 <gates>
 <gate name="G$1" symbol="6028RGBLED" x="-0.254" y="-1.016"/>
 </gates>
@@ -13796,7 +13795,7 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <connect gate="G$1" pin="VIN" pad="P$3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27487774/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27487774/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -13888,25 +13887,25 @@ Source: &lt;a href="http://www.littelfuse.com/products/resettable-ptcs.aspx"&gt;
 <part name="R12" library="Components" library_urn="urn:adsk.eagle:library:24604434" deviceset="RESISTOR" device="-0603" package3d_urn="urn:adsk.eagle:package:24604482/5" value="500"/>
 <part name="U$1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" deviceset="PRTR5V0U2X" device="" package3d_urn="urn:adsk.eagle:package:24167658/7" override_package3d_urn="urn:adsk.eagle:package:24602101/2" override_package_urn="urn:adsk.eagle:footprint:24167540/1"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
-<part name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB4" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB5" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB6" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB7" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB8" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB9" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB10" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB11" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB15" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB14" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/1"/>
-<part name="UGLOW3" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/3"/>
-<part name="UGLOW2" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/3"/>
-<part name="UGLOW1" library="SK6812MINI-E" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:24737959/3"/>
+<part name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB4" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB5" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB6" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB7" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB8" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB9" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB10" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB11" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB15" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB14" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" deviceset="6028RGBLED" device="_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2"/>
+<part name="UGLOW3" library="SK6812MINI-E" library_urn="urn:adsk.eagle:library:27543939" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:27543944/1"/>
+<part name="UGLOW2" library="SK6812MINI-E" library_urn="urn:adsk.eagle:library:27543939" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:27543944/1"/>
+<part name="UGLOW1" library="SK6812MINI-E" library_urn="urn:adsk.eagle:library:27543939" deviceset="SK6812MINI-E" device="" package3d_urn="urn:adsk.eagle:package:27543944/1"/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+5V"/>
 <part name="FERRITE_VCC" library="Filter" library_urn="urn:adsk.eagle:library:16378195" deviceset="FB" device="CHIP-0603(1608-METRIC)" package3d_urn="urn:adsk.eagle:package:16378199/1" value="FERRITE_BEAD"/>
 <part name="FUSE" library="polyfuse-smd_20" deviceset="?" device="0603L" technology="050"/>
