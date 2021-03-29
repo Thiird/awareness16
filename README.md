@@ -4,9 +4,11 @@ Mechanical macropad, used as pathfinder for my first custom mechanical keyboard 
 **SPECS**  
 -16 1U keys in a 4x4 matrix, MX footprint
 
--RGB Matri, SMD LEDs 
+-USB C, CtoC compatible
 
--RGB underglow, SMD, 3 leds, SK 6812MINI-E
+-RGB Matrix, 6028 SMD LEDs 
+
+-RGB underglow, SK6812MINI-E SMD LEDs
 
 -ESD protection
 
