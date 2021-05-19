@@ -19,10 +19,10 @@ Mechanical macropad, used as pathfinder for my first custom mechanical keyboard 
 # Renderings
 
 **PCB top**
-<img src="renderings/32u4_macropad_top.png">
+<img src="renderings/awareness16_pcb_top.png">
      
 **PCB bottom**
-<img src="renderings/32u4_macropad_bottom.png">
+<img src="renderings/awareness16_pcb_bottom.png">
 
 # Credits
 Without the help of many generous and patient people online I would have never been able to complete
