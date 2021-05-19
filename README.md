@@ -16,4 +16,19 @@ Mechanical macropad, used as pathfinder for my first custom mechanical keyboard 
 
 -LED driver: IS31FL3733, eTQFP-48 package
 
-![](https://github.com/Thiird/Awareness16/tree/master/renderings/32u4_macropad_bottom.png)
+# Renderings
+
+**PCB top**
+<img src="renderings/32u4_macropad_top.png">
+     
+**PCB bottom**
+<img src="renderings/32u4_macropad_bottom.png">
+
+# Credits
+Without the help of many generous and patient people online I would have never been able to complete
+this project.
+
+Special thanks to:
+- Hadi for making a pcb guide series: https://www.youtube.com/channel/UCpWGAJr2AU7LPUwVYbBQZRg
+- People on the Keyboard Atelier discord
+- People on the QMK discord
