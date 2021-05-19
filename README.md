@@ -16,4 +16,4 @@ Mechanical macropad, used as pathfinder for my first custom mechanical keyboard 
 
 -LED driver: IS31FL3733, eTQFP-48 package
 
-![PCB top](https://github.com/Thiird.Awareness16/renderings)
+![](https://github.com/Thiird/Awareness16/tree/master/renderings/32u4_macropad_bottom.png)
