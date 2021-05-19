@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="19.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -26,7 +26,7 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
@@ -249,16 +249,16 @@
 <wire x1="64.14963125" y1="45.0996" x2="64.14963125" y2="31.1003" width="0.001" layer="49"/>
 <wire x1="64.14963125" y1="31.1003" x2="50.15033125" y2="31.1003" width="0.001" layer="49"/>
 <wire x1="50.15033125" y1="31.1003" x2="50.15033125" y2="45.0996" width="0.001" layer="49"/>
-<text x="70.2615" y="98.023" size="0.6096" layer="25" rot="R45">LED-DRIVER</text>
-<text x="73.5" y="95" size="0.5" layer="25" rot="R45">ISSI IS31FL3733</text>
-<text x="21.5" y="99.5" size="1.016" layer="25" rot="R45">MCU</text>
-<text x="24.5" y="93.5" size="1" layer="25" rot="R45">   Atmel
+<text x="70.0615" y="97.923" size="0.7" layer="25" rot="R45">LED-DRIVER</text>
+<text x="73.4" y="94.9" size="0.7" layer="25" rot="R45">IS31FL3733</text>
+<text x="21.3" y="99.3" size="1.3" layer="25" rot="R45">MCU</text>
+<text x="24.1" y="92.9" size="1.2" layer="25" rot="R45">   Atmel
 Mega 32u4</text>
 <text x="43.546" y="95.077" size="1" layer="25" rot="R270">FUSE</text>
 <text x="51.7155" y="90.8075" size="1" layer="25" rot="R90">FERRITE</text>
 <text x="37.9845" y="90.977" size="0.8" layer="25" rot="R270">MCU CAP
   MAIN</text>
-<text x="15.56823125" y="108.0675" size="1.3" layer="26" rot="MR0">BOOT</text>
+<text x="16.36823125" y="108.0675" size="1.3" layer="26" rot="MR0">BOOT</text>
 <text x="32.8" y="97.1" size="1.4224" layer="26" rot="MR0">Stefano Nicolis 
 Thiird@Github</text>
 <text x="79.8" y="99.5" size="1.4224" layer="26" rot="MR0">KeyboardAtelier@Discord</text>
@@ -282,8 +282,8 @@ trying to grow</text>
 <text x="40.545" y="100.647" size="2" layer="26" rot="MR0">Awareness16
      rev 2
 </text>
-<text x="38.8755" y="98.5005" size="1.1" layer="25">D+</text>
-<text x="38.8755" y="96.5925" size="1.1" layer="25">D-</text>
+<text x="37.3755" y="98.5005" size="1.1" layer="25">D+</text>
+<text x="37.3755" y="96.5925" size="1.1" layer="25">D-</text>
 <text x="85.014196875" y="69.05915" size="2" layer="26" rot="MR270">Third time is the charm</text>
 </plain>
 <libraries>
@@ -450,8 +450,7 @@ trying to grow</text>
 </packages>
 <packages3d>
 <package3d name="QFP50P900X900X120-49N" urn="urn:adsk.eagle:package:24185072/8" type="empty" library_version="6">
-<description>&lt;b&gt;IS31FL3733-TQLS4-1&lt;/b&gt;&lt;br&gt;
-</description>
+<description>&lt;b&gt;IS31FL3733-TQLS4-1&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFP50P900X900X120-49N"/>
 </packageinstances>
@@ -530,7 +529,7 @@ trying to grow</text>
 </package3d>
 </packages3d>
 </library>
-<library name="crystal-geyer_V1_0_NIC">
+<library name="crystal-geyer_V1_0_NIC" urn="urn:adsk.eagle:library:27677597">
 <description>&lt;BR&gt;&lt;big&gt;&lt;b&gt;GEYER ELECTRONIC --- Your producer for quartz crystals and oscillators&lt;/B&gt;&lt;/big&gt;&lt;br&gt;&lt;Hr&gt;
 
 Version 1.0, 07.06.2016
@@ -914,7 +913,7 @@ Source: &lt;a href="http://www.littelfuse.com/~/media/electronics/datasheets/res
 </package>
 </packages>
 <packages3d>
-<package3d name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:package:27487774/2" type="empty" library_version="4">
+<package3d name="6028RGBLED_BOTTOM" urn="urn:adsk.eagle:package:27487774/3" type="model" library_version="5">
 <packageinstances>
 <packageinstance name="6028RGBLED_BOTTOM"/>
 </packageinstances>
@@ -1353,7 +1352,7 @@ design rules under a new name.</description>
 <attribute name="PACKAGE" value="Package " x="-20.955" y="161.72625" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="PRICE" value="None" x="-20.955" y="161.72625" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="Q1" library="crystal-geyer_V1_0_NIC" package="2.0X1.6_KX-5" package3d_urn="urn:adsk.eagle:package:11926/1" value="16MHz" x="16.2406625" y="92.896403125" smashed="yes" rot="R45"/>
+<element name="Q1" library="crystal-geyer_V1_0_NIC" library_urn="urn:adsk.eagle:library:27677597" package="2.0X1.6_KX-5" package3d_urn="urn:adsk.eagle:package:11926/1" value="16MHz" x="16.2406625" y="92.896403125" smashed="yes" rot="R45"/>
 <element name="R1" library="Components" library_urn="urn:adsk.eagle:library:24604434" package="R0603" package3d_urn="urn:adsk.eagle:package:24604482/5" override_package3d_urn="urn:adsk.eagle:package:24602074/2" override_package_urn="urn:adsk.eagle:footprint:24602075/1" override_locally_modified="yes" value="5.1k" x="52.971" y="101.46" smashed="yes" rot="R180">
 <attribute name="NAME" x="55.251103125" y="101" size="1" layer="25" ratio="13"/>
 </element>
@@ -1366,8 +1365,8 @@ design rules under a new name.</description>
 <element name="R2" library="Components" library_urn="urn:adsk.eagle:library:24604434" package="R0603" package3d_urn="urn:adsk.eagle:package:24604482/5" value="5.1k" x="42.5" y="101.46" smashed="yes">
 <attribute name="NAME" x="38.525146875" y="101" size="1" layer="25" ratio="13"/>
 </element>
-<element name="R3" library="Components" library_urn="urn:adsk.eagle:library:24604434" package="R0603" package3d_urn="urn:adsk.eagle:package:24604482/5" value="10k" x="13.904815625" y="103.28135" smashed="yes" rot="R180">
-<attribute name="NAME" x="13.11579375" y="104.298884375" size="1" layer="25" ratio="13"/>
+<element name="R3" library="Components" library_urn="urn:adsk.eagle:library:24604434" package="R0603" package3d_urn="urn:adsk.eagle:package:24604482/5" value="10k" x="14.604815625" y="103.38135" smashed="yes" rot="R135">
+<attribute name="NAME" x="13.333603125" y="105.14121875" size="1" layer="25" ratio="13" rot="R135"/>
 </element>
 <element name="R4" library="Components" library_urn="urn:adsk.eagle:library:24604434" package="R0603" package3d_urn="urn:adsk.eagle:package:24604482/5" value="10k" x="33.45251875" y="98.211475" smashed="yes" rot="R135">
 <attribute name="NAME" x="34.7954125" y="96.367828125" size="1" layer="25" ratio="13" rot="R315"/>
@@ -1383,25 +1382,25 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="47.5" y="94.227" size="1.016" layer="22" font="vector" rot="MR0" align="top-center"/>
 </element>
 <element name="U$1" library="Controller" library_urn="urn:adsk.eagle:library:24167401" package="PRTR5V0U2X" package3d_urn="urn:adsk.eagle:package:24167658/7" override_package3d_urn="urn:adsk.eagle:package:24602101/2" override_package_urn="urn:adsk.eagle:footprint:24167540/1" value="PRTR5V0U2X" x="47.625" y="100.96" smashed="yes" rot="R90"/>
-<element name="RGB9" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="19.05" y="33" smashed="yes"/>
-<element name="RGB10" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="38.1" y="33" smashed="yes"/>
-<element name="RGB11" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="57.15" y="33" smashed="yes"/>
-<element name="RGB15" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="57.15" y="14" smashed="yes"/>
-<element name="RGB14" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="38.1" y="14" smashed="yes"/>
-<element name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="19.05" y="14" smashed="yes"/>
-<element name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="76.2" y="33" smashed="yes"/>
-<element name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="76.2" y="14" smashed="yes"/>
+<element name="RGB9" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="19.05" y="33" smashed="yes"/>
+<element name="RGB10" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="38.1" y="33" smashed="yes"/>
+<element name="RGB11" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="57.15" y="33" smashed="yes"/>
+<element name="RGB15" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="57.15" y="14" smashed="yes"/>
+<element name="RGB14" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="38.1" y="14" smashed="yes"/>
+<element name="RGB13" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="19.05" y="14" smashed="yes"/>
+<element name="RGB12" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="76.2" y="33" smashed="yes"/>
+<element name="RGB16" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="76.2" y="14" smashed="yes"/>
 <element name="UGLOW3" library="SK6812MINI-E" library_urn="urn:adsk.eagle:library:27543939" package="SK6812MINI-E" package3d_urn="urn:adsk.eagle:package:27543944/1" value="SK6812MINI-E" x="47.625" y="65.948" smashed="yes" rot="MR0"/>
-<element name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="19.05" y="71" smashed="yes"/>
+<element name="RGB1" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="19.05" y="71" smashed="yes"/>
 <element name="UGLOW2" library="SK6812MINI-E" library_urn="urn:adsk.eagle:library:27543939" package="SK6812MINI-E" package3d_urn="urn:adsk.eagle:package:27543944/1" value="SK6812MINI-E" x="47.625" y="46.42" smashed="yes" rot="MR0"/>
 <element name="UGLOW1" library="SK6812MINI-E" library_urn="urn:adsk.eagle:library:27543939" package="SK6812MINI-E" package3d_urn="urn:adsk.eagle:package:27543944/1" value="SK6812MINI-E" x="47.625" y="27.92" smashed="yes" rot="MR0"/>
-<element name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="38.1" y="71" smashed="yes"/>
-<element name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="57.15" y="71" smashed="yes"/>
-<element name="RGB4" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="76.2" y="71" smashed="yes"/>
-<element name="RGB5" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="19.05" y="52" smashed="yes"/>
-<element name="RGB6" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="38.1" y="52" smashed="yes"/>
-<element name="RGB7" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="57.15" y="52" smashed="yes"/>
-<element name="RGB8" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/2" value="6028RGBLED_BOTTOM" x="76.2" y="52" smashed="yes"/>
+<element name="RGB2" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="38.1" y="71" smashed="yes"/>
+<element name="RGB3" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="57.15" y="71" smashed="yes"/>
+<element name="RGB4" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="76.2" y="71" smashed="yes"/>
+<element name="RGB5" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="19.05" y="52" smashed="yes"/>
+<element name="RGB6" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="38.1" y="52" smashed="yes"/>
+<element name="RGB7" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="57.15" y="52" smashed="yes"/>
+<element name="RGB8" library="6028LED" library_urn="urn:adsk.eagle:library:27487770" package="6028RGBLED_BOTTOM" package3d_urn="urn:adsk.eagle:package:27487774/3" value="6028RGBLED_BOTTOM" x="76.2" y="52" smashed="yes"/>
 <element name="MCU" library="OPL_IC" library_urn="urn:adsk.eagle:library:8004595" package="TQFP44-0.8-9.6X9.6MM" package3d_urn="urn:adsk.eagle:package:8004785/1" override_package3d_urn="urn:adsk.eagle:package:24602988/2" override_package_urn="urn:adsk.eagle:footprint:8004774/1" value="ATMEGA32U4-TQFP44" x="24.26374375" y="98.8125" smashed="yes" rot="R315">
 <attribute name="MPN" value="ATMEGA32U4" x="36.83610625" y="75.463834375" size="1.778" layer="27" rot="R315" display="off"/>
 </element>
@@ -1456,13 +1455,13 @@ design rules under a new name.</description>
 <element name="C16" library="Components" library_urn="urn:adsk.eagle:library:24604434" package="C0603" package3d_urn="urn:adsk.eagle:package:24604501/6" value="100nF" x="39.1385" y="90.977" smashed="yes" rot="MR180">
 <attribute name="NAME" x="37.8385" y="92.827" size="1" layer="26" ratio="13" rot="MR180"/>
 </element>
-<element name="S1" library="TS-1187A-B-A-B" package="SW_TS-1187A-B-A-B" value="TS-1187A-B-A-B" x="12.88221875" y="103.28135" smashed="yes" rot="MR90">
-<attribute name="AVAILABILITY" value="Unavailable" x="12.88221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="DESCRIPTION" value=" Tact Switch " x="12.88221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="MF" value="XKB Industrial Precision" x="12.88221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="MP" value="TS-1187A-B-A-B" x="12.88221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="PACKAGE" value="Package " x="12.88221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="PRICE" value="None" x="12.88221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
+<element name="S1" library="TS-1187A-B-A-B" package="SW_TS-1187A-B-A-B" value="TS-1187A-B-A-B" x="13.68221875" y="103.28135" smashed="yes" rot="MR90">
+<attribute name="AVAILABILITY" value="Unavailable" x="13.68221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="DESCRIPTION" value=" Tact Switch " x="13.68221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="XKB Industrial Precision" x="13.68221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MP" value="TS-1187A-B-A-B" x="13.68221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="PACKAGE" value="Package " x="13.68221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="PRICE" value="None" x="13.68221875" y="103.28135" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
 </elements>
 <signals>
@@ -1548,8 +1547,8 @@ design rules under a new name.</description>
 <wire x1="67.5" y1="102" x2="67.60215625" y2="102" width="0.3" layer="1"/>
 <wire x1="69.33623125" y1="100.265925" x2="67.60215625" y2="102" width="0.3" layer="1"/>
 <wire x1="67.5" y1="102" x2="68.546" y2="102" width="0.5" layer="16"/>
-<wire x1="17.39565" y1="103.28135" x2="16.138165625" y2="103.28135" width="0.5" layer="1"/>
-<wire x1="16.138165625" y1="103.28135" x2="14.779815625" y2="103.28135" width="0.5" layer="1"/>
+<wire x1="17.39565" y1="103.28135" x2="15.9065" y2="103.28135" width="0.5" layer="1"/>
+<wire x1="15.9065" y1="103.28135" x2="15.22353125" y2="102.76263125" width="0.5" layer="1"/>
 <wire x1="80.69651875" y1="95.523" x2="80.358040625" y2="95.861478125" width="0.5" layer="1"/>
 <wire x1="81.807609375" y1="94.411909375" x2="80.69651875" y2="95.523" width="0.5" layer="1"/>
 <wire x1="49" y1="92.8562" x2="54.07485" y2="92.8562" width="0.5" layer="1"/>
@@ -1706,18 +1705,20 @@ design rules under a new name.</description>
 <contactref element="R3" pad="2"/>
 <contactref element="MCU" pad="13"/>
 <wire x1="17.89978125" y1="96.974021875" x2="17.279759375" y2="96.354" width="0.3" layer="1"/>
-<wire x1="17.279759375" y1="96.354" x2="16.4795" y2="96.354" width="0.3" layer="1"/>
-<wire x1="16.4795" y1="96.354" x2="13.029815625" y2="99.803684375" width="0.3" layer="1"/>
-<wire x1="13.029815625" y1="99.803684375" x2="13.029815625" y2="103.28135" width="0.3" layer="1"/>
+<wire x1="17.279759375" y1="96.354" x2="16.5795" y2="96.354" width="0.3" layer="1"/>
+<wire x1="16.5795" y1="96.354" x2="13.350103125" y2="99.583396875" width="0.3" layer="1"/>
+<wire x1="13.56351875" y1="103.5774875" x2="13.986096875" y2="104.000065625" width="0.3" layer="1"/>
+<wire x1="13.56351875" y1="103.5774875" x2="13.350103125" y2="99.583396875" width="0.3" layer="1"/>
 <contactref element="S1" pad="D"/>
 <contactref element="S1" pad="C"/>
-<wire x1="13.029815625" y1="103.28135" x2="11.010525" y2="103.28135" width="0.5" layer="1"/>
-<wire x1="11.010525" y1="103.28135" x2="11.00721875" y2="103.28135" width="0.5" layer="1"/>
-<via x="11.00721875" y="103.28135" extent="1-16" drill="0.35"/>
-<wire x1="11.00721875" y1="103.28135" x2="11.00721875" y2="103.192503125" width="0.5" layer="16"/>
-<wire x1="11.00721875" y1="103.192503125" x2="11.00721875" y2="100.28135" width="0.5" layer="16"/>
-<wire x1="11.00721875" y1="106.28135" x2="11.00721875" y2="103.251059375" width="0.5" layer="16"/>
-<wire x1="11.00721875" y1="103.251059375" x2="11.00721875" y2="103.28135" width="0.5" layer="16"/>
+<wire x1="13.986096875" y1="104.000065625" x2="13.3861625" y2="104.6" width="0.5" layer="1"/>
+<wire x1="13.3861625" y1="104.6" x2="12.4" y2="104.6" width="0.5" layer="1"/>
+<wire x1="12.4" y1="104.6" x2="11.8" y2="104" width="0.5" layer="1"/>
+<via x="11.8" y="104" extent="1-16" drill="0.35"/>
+<wire x1="11.8" y1="104" x2="11.8" y2="106.27413125" width="0.5" layer="16"/>
+<wire x1="11.8" y1="106.27413125" x2="11.80721875" y2="106.28135" width="0.5" layer="16"/>
+<wire x1="11.80721875" y1="100.28135" x2="11.8" y2="100.28856875" width="0.5" layer="16"/>
+<wire x1="11.8" y1="100.28856875" x2="11.8" y2="104" width="0.5" layer="16"/>
 </signal>
 <signal name="SCL">
 <contactref element="MCU" pad="18"/>
@@ -1762,11 +1763,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="UNDGLOW">
 <contactref element="MCU" pad="11"/>
-<wire x1="17.334096875" y1="100.085290625" x2="16.17885625" y2="98.93005" width="0.3" layer="1"/>
-<wire x1="16.17885625" y1="98.93005" x2="16.12240625" y2="98.930053125" width="0.3" layer="1"/>
-<via x="16.12240625" y="98.930053125" extent="1-16" drill="0.35"/>
+<wire x1="17.334096875" y1="100.085290625" x2="16.322346875" y2="99.073540625" width="0.3" layer="1"/>
+<wire x1="16.322346875" y1="99.073540625" x2="16.32240625" y2="98.530053125" width="0.3" layer="1"/>
+<via x="16.32240625" y="98.530053125" extent="1-16" drill="0.35"/>
 <contactref element="R12" pad="2"/>
-<wire x1="16.12240625" y1="98.930053125" x2="10.638" y2="93.445646875" width="0.3" layer="16"/>
+<wire x1="16.32240625" y1="98.530053125" x2="15.72240625" y2="98.530053125" width="0.3" layer="16"/>
+<wire x1="15.72240625" y1="98.530053125" x2="10.638" y2="93.445646875" width="0.3" layer="16"/>
 <wire x1="10.638" y1="93.445646875" x2="10.638" y2="73.314" width="0.3" layer="16"/>
 <wire x1="33.1508" y1="65.6375" x2="32.1468" y2="64.6335" width="0.3" layer="16"/>
 <wire x1="33.1508" y1="65.6375" x2="35.7743" y2="65.6375" width="0.3" layer="16"/>
@@ -2853,11 +2855,9 @@ design rules under a new name.</description>
 <via x="42.453" y="27.189" extent="1-16" drill="0.35"/>
 <contactref element="S1" pad="A"/>
 <contactref element="S1" pad="B"/>
-<wire x1="14.75721875" y1="100.28135" x2="14.75721875" y2="106.28135" width="0.5" layer="16"/>
-<wire x1="14.75721875" y1="106.28135" x2="14.6140375" y2="106.44634375" width="0.5" layer="16"/>
-<wire x1="14.75721875" y1="106.28135" x2="12.91865" y2="106.28135" width="0.5" layer="16"/>
-<wire x1="12.91865" y1="106.28135" x2="12.88221875" y2="106.28135" width="0.5" layer="16"/>
-<via x="12.88221875" y="106.28135" extent="1-16" drill="0.35"/>
+<wire x1="15.55721875" y1="100.28135" x2="15.55721875" y2="106.28135" width="0.5" layer="16"/>
+<via x="13.68221875" y="106.28135" extent="1-16" drill="0.35"/>
+<wire x1="15.55721875" y1="106.28135" x2="13.68221875" y2="106.28135" width="0.5" layer="16"/>
 </signal>
 <signal name="N$2">
 <contactref element="FERRITE_VCC" pad="1"/>
@@ -2895,9 +2895,9 @@ design rules under a new name.</description>
 <signal name="N$6">
 <contactref element="MCU" pad="3"/>
 <contactref element="D-" pad="2"/>
-<wire x1="41.3865" y1="97.142321875" x2="38" y2="97.142321875" width="0.3" layer="1"/>
-<via x="38" y="97.142321875" extent="1-16" drill="0.35"/>
-<wire x1="38" y1="97.142321875" x2="26.431" y2="97.142321875" width="0.3" layer="16"/>
+<wire x1="41.3865" y1="97.142321875" x2="40" y2="97.142321875" width="0.3" layer="1"/>
+<via x="40" y="97.142321875" extent="1-16" drill="0.35"/>
+<wire x1="40" y1="97.142321875" x2="26.431" y2="97.142321875" width="0.3" layer="16"/>
 <wire x1="26.431" y1="97.142321875" x2="19" y2="104.5" width="0.3" layer="16"/>
 <wire x1="19" y1="104.5" x2="19" y2="105.5" width="0.3" layer="16"/>
 <wire x1="19" y1="105.5" x2="19.523" y2="106.023" width="0.3" layer="16"/>
@@ -2909,14 +2909,14 @@ design rules under a new name.</description>
 <signal name="N$15">
 <contactref element="MCU" pad="4"/>
 <contactref element="D+" pad="2"/>
-<wire x1="41.3865" y1="98.920290625" x2="39.1465" y2="98.920290625" width="0.3" layer="1"/>
-<wire x1="38" y1="98.920290625" x2="39.1465" y2="98.920290625" width="0.3" layer="1"/>
-<via x="38" y="98.920290625" extent="1-16" drill="0.35"/>
+<via x="40" y="98.920290625" extent="1-16" drill="0.35"/>
 <wire x1="21.29389375" y1="104.0450875" x2="20.33898125" y2="105" width="0.3" layer="1"/>
 <wire x1="20.33898125" y1="105" x2="20" y2="105" width="0.3" layer="1"/>
 <via x="20" y="105" extent="1-16" drill="0.35"/>
-<wire x1="38" y1="98.920290625" x2="26.272209375" y2="98.920290625" width="0.3" layer="16"/>
+<wire x1="40" y1="98.920290625" x2="39.8" y2="98.920290625" width="0.3" layer="16"/>
+<wire x1="39.8" y1="98.920290625" x2="26.272209375" y2="98.920290625" width="0.3" layer="16"/>
 <wire x1="26.272209375" y1="98.920290625" x2="20" y2="105" width="0.3" layer="16"/>
+<wire x1="40" y1="98.920290625" x2="41.3865" y2="98.920290625" width="0.3" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
